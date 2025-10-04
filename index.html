@@ -107,13 +107,14 @@
 
         .search-container input {
             width: 100%;
-            padding: 12px 60px 12px 20px;
+            padding: 6px 60px 6px 15px;
             border: 1px solid #1e3c72;
             background: white;
-            border-radius: 10px;
-            font-size: 16px;
+            border-radius: 8px;
+            font-size: 14px;
             outline: none;
             color: #1e3c72;
+            height: 36px;
         }
 
         .search-container input::placeholder {
@@ -132,37 +133,40 @@
         .gsc-input-box {
             background: white !important;
             border: 1px solid #1e3c72 !important;
-            border-radius: 10px !important;
-            height: auto !important;
+            border-radius: 8px !important;
+            height: 36px !important;
         }
 
         .gsc-input {
             background: transparent !important;
             color: #1e3c72 !important;
-            padding: 10px 20px !important;
-            font-size: 16px !important;
+            padding: 6px 15px !important;
+            font-size: 14px !important;
+            height: 36px !important;
         }
 
         .gsc-search-button {
             background: #ff8c42 !important;
             border: none !important;
-            border-radius: 8px !important;
-            padding: 8px 20px !important;
+            border-radius: 6px !important;
+            padding: 0 15px !important;
             margin-left: 5px !important;
-            min-height: 36px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 8px 20px !important;
-            border-radius: 8px !important;
-            min-height: 36px !important;
+            padding: 0 15px !important;
+            border-radius: 6px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
         .gsc-search-button svg {
-            width: 16px !important;
-            height: 16px !important;
+            width: 14px !important;
+            height: 14px !important;
         }
 
         .gsst_a {
@@ -253,63 +257,63 @@
             color: #1e3c72;
         }
 
-        /* CARDS SECTION - ALTEZZA COME HEADER */
+        /* CARDS SECTION - DIMEZZATE */
         .cards-section {
-            padding: 30px 40px;
+            padding: 20px 40px;
             background: #f9fafb;
         }
 
         .cards-section h2 {
             text-align: center;
             color: #1e3c72;
-            margin-bottom: 20px;
-            font-size: 22px;
+            margin-bottom: 15px;
+            font-size: 20px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
             background: white;
-            padding: 12px 15px;
-            border-radius: 8px;
+            padding: 8px 12px;
+            border-radius: 6px;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
             text-decoration: none;
             color: inherit;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60px;
+            min-height: 30px;
         }
 
         .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 15px rgba(255, 140, 66, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.2);
         }
 
         .card-icon {
-            font-size: 24px;
-            margin-bottom: 5px;
+            font-size: 18px;
+            margin-bottom: 3px;
         }
 
         .card h3 {
             color: #1e3c72;
-            margin-bottom: 3px;
-            font-size: 14px;
+            margin-bottom: 2px;
+            font-size: 12px;
         }
 
         .card p {
             color: #666;
-            font-size: 11px;
+            font-size: 10px;
         }
 
         /* CONTENT SECTION */
@@ -572,9 +576,11 @@
             <h1>Ricerca con Uno Scopo</h1>
             <p class="subtitle">Insieme possiamo fare la differenza, una ricerca alla volta</p>
             <div class="search-container">
-                <!-- Google CSE Search Box -->
-                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-                <div class="gcse-searchbox-only"></div>
+                <!-- Google CSE Search Box with form redirect -->
+                <form action="results.html" method="get" id="searchForm">
+                    <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+                    <div class="gcse-searchbox-only" data-resultsUrl="results.html"></div>
+                </form>
             </div>
             <p class="reminder">📌 Impostaci come homepage e salvaci tra i preferiti</p>
         </div>
