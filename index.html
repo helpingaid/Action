@@ -104,8 +104,8 @@
 
         .search-container input {
             width: 100%;
-            padding: 18px 60px 18px 20px;
-            border: 2px solid rgba(255,255,255,0.3);
+            padding: 12px 60px 12px 20px;
+            border: 1px solid rgba(255,255,255,0.3);
             background: rgba(255,255,255,0.15);
             border-radius: 10px;
             font-size: 16px;
@@ -117,7 +117,7 @@
             color: rgba(255,255,255,0.7);
         }
 
-        /* Google CSE Custom Styling */
+        /* Google CSE Custom Styling - RIDOTTO */
         .gcse-searchbox-only {
             background: transparent !important;
         }
@@ -128,7 +128,7 @@
 
         .gsc-input-box {
             background: rgba(255,255,255,0.15) !important;
-            border: 2px solid rgba(255,255,255,0.3) !important;
+            border: 1px solid rgba(255,255,255,0.3) !important;
             border-radius: 10px !important;
             height: auto !important;
         }
@@ -136,26 +136,92 @@
         .gsc-input {
             background: transparent !important;
             color: white !important;
-            padding: 18px 20px !important;
+            padding: 10px 20px !important;
+            font-size: 16px !important;
         }
 
         .gsc-search-button {
             background: #ff8c42 !important;
             border: none !important;
             border-radius: 8px !important;
-            padding: 13px 26px !important;
+            padding: 8px 20px !important;
             margin-left: 5px !important;
+            min-height: 36px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 13px 26px !important;
+            padding: 8px 20px !important;
             border-radius: 8px !important;
+            min-height: 36px !important;
+        }
+
+        .gsc-search-button svg {
+            width: 16px !important;
+            height: 16px !important;
         }
 
         .gsst_a {
             padding: 5px 10px !important;
+        }
+
+        /* RESULTS PAGE STYLING */
+        .gsc-results-wrapper-overlay {
+            background: white !important;
+        }
+
+        .gsc-result {
+            background: white !important;
+            border: 1px solid #e0e0e0 !important;
+            border-radius: 8px !important;
+            padding: 15px !important;
+            margin-bottom: 15px !important;
+        }
+
+        .gsc-result:hover {
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+        }
+
+        .gs-title {
+            color: #1e3c72 !important;
+            font-size: 18px !important;
+            font-weight: 600 !important;
+        }
+
+        .gs-title:hover {
+            color: #ff8c42 !important;
+        }
+
+        .gs-snippet {
+            color: #555 !important;
+            line-height: 1.6 !important;
+        }
+
+        .gsc-url-top {
+            color: #666 !important;
+        }
+
+        .gsc-results .gsc-cursor-box {
+            margin-top: 30px !important;
+        }
+
+        .gsc-cursor-page {
+            background: white !important;
+            border: 1px solid #e0e0e0 !important;
+            color: #1e3c72 !important;
+            padding: 8px 12px !important;
+            border-radius: 5px !important;
+        }
+
+        .gsc-cursor-page:hover {
+            background: #f0f0f0 !important;
+        }
+
+        .gsc-cursor-current-page {
+            background: #ff8c42 !important;
+            color: white !important;
+            border-color: #ff8c42 !important;
         }
 
         .search-btn {
@@ -165,7 +231,7 @@
             transform: translateY(-50%);
             background: #ff8c42;
             border: none;
-            padding: 13px 26px;
+            padding: 8px 20px;
             border-radius: 8px;
             color: white;
             cursor: pointer;
@@ -725,135 +791,4 @@
                 </div>
             </div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    Come posso massimizzare il mio impatto?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Ci sono diversi modi: imposta SearchForGood come motore di ricerca predefinito nel tuo browser, salvaci tra i preferiti, fai i tuoi acquisti online attraverso i nostri link affiliati, e soprattutto parla di noi ad amici e familiari! Più persone usano SearchForGood, maggiore è l'impatto che possiamo generare insieme.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    I miei dati di ricerca sono al sicuro?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Sì! Utilizziamo Google Custom Search per fornire i risultati di ricerca, che applica gli stessi standard di privacy e sicurezza di Google. Non raccogliamo, conserviamo o vendiamo i tuoi dati personali. La tua privacy è fondamentale per noi.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    Posso suggerire un'organizzazione benefica?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Certamente! Siamo sempre aperti a collaborare con nuove organizzazioni verificate e di qualità. Contattaci attraverso la pagina Contatti fornendo informazioni dettagliate sull'organizzazione che vorresti suggerire. Valuteremo attentamente ogni proposta.
-                </div>
-            </div>
-
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    Quanto viene donato effettivamente?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Il 100% dei profitti viene devoluto in beneficenza. Questo significa che tutti i ricavi generati dalle ricerche e dagli acquisti affiliati, dopo aver coperto i costi minimi essenziali di gestione della piattaforma, vengono interamente donati. Non tratteniamo alcun margine di profitto.
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- CONTATTI PAGE -->
-    <div id="contatti" class="page-section">
-        <div class="content-section">
-            <h1>Contattaci</h1>
-            
-            <div class="content-block">
-                <p style="text-align: center; margin-bottom: 30px;">
-                    Hai domande, suggerimenti o vuoi collaborare con noi? Siamo qui per ascoltarti!
-                </p>
-                
-                <form class="contact-form" onsubmit="handleContactSubmit(event)">
-                    <div class="form-group">
-                        <label for="name">Nome *</label>
-                        <input type="text" id="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="subject">Oggetto *</label>
-                        <input type="text" id="subject" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Messaggio *</label>
-                        <textarea id="message" required></textarea>
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Invia Messaggio</button>
-                </form>
-            </div>
-            
-            <div class="content-block" style="margin-top: 40px; text-align: center;">
-                <h2>Altri Modi per Contattarci</h2>
-                <p style="margin-top: 20px; color: #555;">
-                    📧 Email: <strong>info@searchforgood.org</strong><br>
-                    📱 Social Media: Seguici sui nostri canali per rimanere aggiornato
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>&copy; 2024 SearchForGood - Tutti i diritti riservati</p>
-        <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
-    </footer>
-
-    <script>
-        // Navigation function
-        function showPage(pageId) {
-            // Hide all pages
-            document.querySelectorAll('.page-section').forEach(page => {
-                page.classList.remove('active');
-            });
-            
-            // Remove active class from all nav links
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active');
-            });
-            
-            // Show selected page
-            document.getElementById(pageId).classList.add('active');
-            
-            // Add active class to clicked nav link
-            event.target.classList.add('active');
-            
-            // Scroll to top
-            window.scrollTo(0, 0);
-        }
-
-        // FAQ toggle function
-        function toggleFaq(element) {
-            element.classList.toggle('active');
-            const toggle = element.querySelector('.faq-toggle');
-            toggle.textContent = element.classList.contains('active') ? '−' : '+';
-        }
-
-        // Contact form submission
-        function handleContactSubmit(event) {
-            event.preventDefault();
-            alert('Grazie per averci contattato! Risponderemo al più presto alla tua email.');
-            event.target.reset();
-        }
-    </script>
-</body>
-</html>
+            <div class="faq
