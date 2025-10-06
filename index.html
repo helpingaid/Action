@@ -107,7 +107,8 @@
         }
 
         .search-container {
-            max-width: 700px;
+            max-width: 100%;
+            width: 100%;
             margin: 0 auto 20px;
             position: relative;
         }
@@ -563,20 +564,59 @@
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 32px;
+            header {
+                padding: 15px 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
             }
 
             nav {
                 gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .search-container {
+                padding: 0 10px;
+            }
+
+            .cards-section {
+                padding: 20px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
             }
 
             .affiliazioni-container {
                 grid-template-columns: 1fr;
+                padding: 0 10px;
             }
 
             .content-section {
                 padding: 40px 20px;
+            }
+
+            footer {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -600,8 +640,8 @@
     <!-- HOME PAGE -->
     <div id="home" class="page-section active">
         <div class="hero">
-            <h1>Ricerca con Uno Scopo</h1>
-            <p class="subtitle">Insieme possiamo fare la differenza, una ricerca alla volta</p>
+            <h1>RBe Part of the Change</h1>
+            <p class="subtitle">Naviga per Beneficienza</p>
             <div class="search-container">
                 <!-- Google CSE Search Box -->
                 <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
