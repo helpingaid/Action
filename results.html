@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risultati Ricerca - SearchForGood</title>
+    <title>Kindorya - Ricerca per Beneficenza</title>
     
     <!-- Google AdSense -->
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825054531176545"
@@ -28,7 +28,6 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            background: #f9fafb;
             overflow-x: hidden;
             width: 100%;
         }
@@ -38,7 +37,7 @@
             width: 100%;
         }
 
-        /* HEADER */
+        /* HEADER - RIDOTTO SU 1 RIGA */
         header {
             background: #1e3c72;
             padding: 15px 40px;
@@ -63,8 +62,11 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            text-decoration: none;
-            color: white;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
         }
 
         .logo span {
@@ -84,32 +86,57 @@
             white-space: nowrap;
         }
 
-        nav a:hover {
+        nav a:hover, nav a.active {
             color: #ff8c42;
         }
 
-        /* SEARCH CONTAINER - LARGHEZZA 100% */
-        .search-header {
-            background: white;
-            padding: 12px 0;
-            border-bottom: 1px solid #e0e0e0;
+        /* HERO SECTION - RIDOTTO DI 1/3 */
+        .hero {
+            background: #e5fcfc;
+            padding: 50px 40px;
+            text-align: center;
+            color: #1e3c72;
             width: 100%;
         }
 
-        .search-wrapper {
-            max-width: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 0 40px;
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 10px;
+            color: #1e3c72;
+        }
+
+        .hero .subtitle {
+            font-size: 16px;
+            margin-bottom: 30px;
+            opacity: 0.8;
+            color: #1e3c72;
         }
 
         .search-container {
             max-width: 100%;
             width: 100%;
+            margin: 0 auto 20px;
             position: relative;
+            padding: 0 20px;
         }
 
-        /* Google CSE Custom Styling - LARGHEZZA 100% E CENTRATO */
+        .search-container input {
+            width: 100%;
+            padding: 6px 60px 6px 15px;
+            border: 1px solid #1e3c72;
+            background: white;
+            border-radius: 8px;
+            font-size: 14px;
+            outline: none;
+            color: #1e3c72;
+            height: 36px;
+        }
+
+        .search-container input::placeholder {
+            color: rgba(30, 60, 114, 0.5);
+        }
+
+        /* Google CSE Custom Styling - RIDOTTO */
         .gcse-searchbox-only {
             background: transparent !important;
             width: 100% !important;
@@ -129,35 +156,37 @@
         }
 
         .gsc-input-box {
-            background: #f5f5f5 !important;
-            border: 1px solid #ddd !important;
+            background: white !important;
+            border: 1px solid #1e3c72 !important;
             border-radius: 8px !important;
-            height: 32px !important;
-            width: 100% !important;
+            height: 36px !important;
             display: flex !important;
             align-items: center !important;
+            width: 100% !important;
         }
 
         .gsc-input input {
             background: transparent !important;
-            color: #333 !important;
+            color: #1e3c72 !important;
             padding: 0 15px !important;
             font-size: 14px !important;
-            height: 32px !important;
-            line-height: 32px !important;
+            height: 36px !important;
+            line-height: 36px !important;
             vertical-align: middle !important;
+            display: flex !important;
+            align-items: center !important;
             width: 100% !important;
         }
 
         .gsc-input {
             display: flex !important;
             align-items: center !important;
-            height: 32px !important;
+            height: 36px !important;
             width: 100% !important;
         }
 
         table.gsc-input {
-            height: 32px !important;
+            height: 36px !important;
             width: 100% !important;
         }
 
@@ -177,19 +206,19 @@
             background: #ff8c42 !important;
             border: none !important;
             border-radius: 6px !important;
-            padding: 0 12px !important;
+            padding: 0 15px !important;
             margin-left: 5px !important;
-            height: 28px !important;
-            min-height: 28px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 0 12px !important;
+            padding: 0 15px !important;
             border-radius: 6px !important;
-            height: 28px !important;
-            min-height: 28px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
         .gsc-search-button svg {
@@ -197,109 +226,60 @@
             height: 14px !important;
         }
 
-        /* RESULTS STYLING - LARGHEZZA 100% */
-        .results-container {
-            max-width: 100%;
-            width: 100%;
-            margin: 0;
-            padding: 20px 40px;
+        .gsst_a {
+            padding: 5px 10px !important;
         }
 
-        .gsc-results-wrapper-overlay,
-        .gsc-results-wrapper-visible {
-            background: transparent !important;
-            width: 100% !important;
-            max-width: 100% !important;
-        }
-
-        .gsc-resultsbox-visible {
-            width: 100% !important;
-            max-width: 100% !important;
-        }
-
-        .gsc-webResult,
-        .gsc-results {
-            width: 100% !important;
-            max-width: 100% !important;
+        /* RESULTS PAGE STYLING */
+        .gsc-results-wrapper-overlay {
+            background: white !important;
         }
 
         .gsc-result {
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             border-radius: 8px !important;
-            padding: 12px 15px !important;
-            margin-bottom: 12px !important;
-            transition: all 0.3s !important;
-            width: 100% !important;
+            padding: 15px !important;
+            margin-bottom: 15px !important;
         }
 
         .gsc-result:hover {
-            box-shadow: 0 3px 8px rgba(0,0,0,0.1) !important;
-            border-color: #ff8c42 !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
         }
 
         .gs-title {
             color: #1e3c72 !important;
-            font-size: 16px !important;
+            font-size: 18px !important;
             font-weight: 600 !important;
-            margin-bottom: 5px !important;
         }
 
         .gs-title:hover {
-            color: #ff8c42 !important;
-            text-decoration: underline !important;
-        }
-
-        .gs-webResult .gs-title,
-        .gs-imageResult .gs-title {
-            color: #1e3c72 !important;
-        }
-
-        .gs-webResult .gs-title:hover,
-        .gs-imageResult .gs-title:hover {
             color: #ff8c42 !important;
         }
 
         .gs-snippet {
             color: #555 !important;
-            line-height: 1.5 !important;
-            font-size: 13px !important;
+            line-height: 1.6 !important;
         }
 
         .gsc-url-top {
-            color: #0066cc !important;
-            font-size: 12px !important;
-            margin-bottom: 4px !important;
+            color: #666 !important;
         }
 
-        .gs-per-result-labels {
-            display: none !important;
-        }
-
-        .gsc-above-wrapper-area {
-            width: 100% !important;
-        }
-
-        /* PAGINATION */
         .gsc-results .gsc-cursor-box {
-            margin-top: 40px !important;
-            text-align: center !important;
+            margin-top: 30px !important;
         }
 
         .gsc-cursor-page {
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             color: #1e3c72 !important;
-            padding: 10px 15px !important;
-            border-radius: 6px !important;
-            margin: 0 5px !important;
-            font-weight: 500 !important;
-            transition: all 0.3s !important;
+            padding: 8px 12px !important;
+            border-radius: 5px !important;
         }
 
         .gsc-cursor-page:hover {
-            background: #f5f5f5 !important;
-            border-color: #ff8c42 !important;
+            background: #f0f0f0 !important;
         }
 
         .gsc-cursor-current-page {
@@ -308,34 +288,432 @@
             border-color: #ff8c42 !important;
         }
 
-        .gsc-cursor-current-page:hover {
-            background: #ff8c42 !important;
-        }
-
-        /* ADS STYLING */
-        .gsc-adBlock {
-            background: #fffbf0 !important;
-            border: 1px solid #ffe4a3 !important;
-            border-radius: 8px !important;
-            padding: 15px !important;
-            margin-bottom: 20px !important;
-        }
-
-        .gsc-adBlock .gs-title {
-            color: #7c4dff !important;
-        }
-
-        /* INFO MESSAGE */
-        .info-banner {
-            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+        .search-btn {
+            position: absolute;
+            right: 5px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #ff8c42;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 8px;
             color: white;
-            padding: 15px 40px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .search-btn:hover {
+            background: #ff7a29;
+        }
+
+        .reminder {
+            font-size: 14px;
+            margin-top: 15px;
+            opacity: 0.85;
+            color: #1e3c72;
+        }
+
+        /* CARDS SECTION - DIMEZZATE */
+        .cards-section {
+            padding: 20px 40px;
+            background: #f9fafb;
+        }
+
+        .cards-section h2 {
             text-align: center;
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .card {
+            background: white;
+            padding: 8px 12px;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 30px;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.2);
+        }
+
+        .card-icon {
+            font-size: 18px;
+            margin-bottom: 3px;
+        }
+
+        .card h3 {
+            color: #1e3c72;
+            margin-bottom: 2px;
+            font-size: 12px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 10px;
+        }
+
+        /* CONTENT SECTION */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .content-section h1 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+            font-size: 38px;
+        }
+
+        .content-block {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .content-block h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content-block p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        /* AFFILIAZIONI LAYOUT */
+        .affiliazioni-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .affiliazioni-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+            gap: 15px;
+        }
+
+        .affiliate-card {
+            background: white;
+            padding: 20px 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .affiliate-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 140, 66, 0.2);
+        }
+
+        .affiliate-card .icon {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        .affiliate-card h3 {
+            color: #1e3c72;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .affiliate-card p {
+            font-size: 12px;
+        }
+
+        .affiliate-sidebar {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            height: fit-content;
+        }
+
+        .affiliate-sidebar h3 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+
+        /* SHOPPING GRID */
+        .shopping-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .shopping-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        .shopping-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(255, 140, 66, 0.2);
+        }
+
+        .shopping-card .icon {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .shopping-card h3 {
+            color: #1e3c72;
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .shopping-card p {
             font-size: 14px;
         }
 
-        .info-banner strong {
+        /* INTRO BLOCK */
+        .intro-block {
+            background: #e5fcfc !important;
+            text-align: center;
+            padding: 40px !important;
+        }
+
+        .intro-block h2 {
+            margin-bottom: 20px;
+        }
+
+        /* PROGETTI COUNTER */
+        .counter-card {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .counter-number {
+            font-size: 48px;
+            font-weight: 700;
             color: #ff8c42;
+            margin: 20px 0;
+        }
+
+        .counter-label {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+
+        /* RISORSE TABS */
+        .tabs-container {
+            margin-top: 30px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            border-bottom: 2px solid #e0e0e0;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            background: transparent;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            color: #666;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab-btn:hover {
+            color: #1e3c72;
+        }
+
+        .tab-btn.active {
+            color: #1e3c72;
+            border-bottom-color: #ff8c42;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .resource-card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .resource-card h4 {
+            color: #1e3c72;
+            margin-bottom: 10px;
+        }
+
+        .resource-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .resource-card a {
+            display: inline-block;
+            margin-top: 10px;
+            color: #ff8c42;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .resource-card a:hover {
+            text-decoration: underline;
+        }
+
+        /* FAQ */
+        .faq-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 15px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .faq-item:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+        }
+
+        .faq-question {
+            color: #1e3c72;
+            font-weight: 600;
+            font-size: 18px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: #555;
+            margin-top: 15px;
+            line-height: 1.8;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-toggle {
+            font-size: 24px;
+            color: #ff8c42;
+        }
+
+        /* CONTACT FORM */
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #1e3c72;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff8c42;
+        }
+
+        .form-group textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background: #ff8c42;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background: #ff7a29;
         }
 
         /* FOOTER */
@@ -344,11 +722,30 @@
             color: white;
             padding: 40px;
             text-align: center;
-            margin-top: 60px;
         }
 
         footer p {
             opacity: 0.9;
+        }
+
+        /* RESULTS PAGE */
+        .results-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .gcse-searchresults-only {
+            margin-top: 20px;
+        }
+
+        /* HIDE SECTIONS */
+        .page-section {
+            display: none;
+        }
+
+        .page-section.active {
+            display: block;
         }
 
         /* RESPONSIVE */
@@ -359,7 +756,7 @@
 
             .header-content {
                 flex-direction: column;
-                gap: 15px;
+                gap: 10px;
             }
 
             nav {
@@ -368,9 +765,44 @@
                 justify-content: center;
             }
 
-            .search-wrapper,
-            .results-container {
+            .hero {
+                padding: 30px 20px;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+            }
+
+            .search-container {
+                padding: 0 10px;
+            }
+
+            .cards-section {
                 padding: 20px;
+            }
+
+            .cards {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .affiliazioni-container {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            footer {
+                padding: 30px 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .cards {
+                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -379,43 +811,461 @@
     <!-- HEADER -->
     <header>
         <div class="header-content">
-            <a href="index.html" class="logo">🤝 Search<span>ForGood</span></a>
+            <div class="logo">
+                <img src="https://i.imgur.com/yourimagelink.png" alt="Kindorya">
+                Kindorya
+            </div>
             <nav>
-                <a href="index.html">Home</a>
-                <a href="index.html#valori">I nostri valori</a>
-                <a href="index.html#affiliazioni">Affiliazioni</a>
-                <a href="index.html#come-funziona">Come funziona</a>
-                <a href="index.html#faq">FAQ</a>
-                <a href="index.html#contatti">Contatti</a>
+                <a href="#" onclick="showPage('home')" class="nav-link active">Home</a>
+                <a href="#" onclick="showPage('valori')" class="nav-link">Valori</a>
+                <a href="#" onclick="showPage('come-funziona')" class="nav-link">Come Funziona</a>
+                <a href="#" onclick="showPage('shopping')" class="nav-link">Shopping</a>
+                <a href="#" onclick="showPage('progetti')" class="nav-link">Progetti</a>
+                <a href="#" onclick="showPage('risorse')" class="nav-link">Risorse</a>
+                <a href="#" onclick="showPage('faq')" class="nav-link">FAQ</a>
             </nav>
         </div>
     </header>
 
-    <!-- INFO BANNER -->
-    <div class="info-banner">
-        💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong> - Grazie per il tuo contributo!
-    </div>
-
-    <!-- SEARCH SECTION -->
-    <div class="search-header">
-        <div class="search-wrapper">
+    <!-- HOME PAGE -->
+    <div id="home" class="page-section active">
+        <div class="hero">
+            <h1>Ricerca con Uno Scopo</h1>
+            <p class="subtitle">Insieme possiamo fare la differenza, una ricerca alla volta</p>
             <div class="search-container">
+                <!-- Google CSE Search Box -->
                 <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-                <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false" data-autoSearchOnLoad="true"></div>
+                <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false"></div>
+            </div>
+            <p class="reminder">📌 Impostaci come homepage e salvaci tra i preferiti</p>
+        </div>
+
+        <div class="cards-section">
+            <h2>I Nostri Partner</h2>
+            <div class="cards">
+                <a href="https://www.ebay.it" target="_blank" class="card">
+                    <div class="card-icon">🛍️</div>
+                    <h3>eBay</h3>
+                    <p>Compra responsabile</p>
+                </a>
+                <a href="https://www.yoox.com" target="_blank" class="card">
+                    <div class="card-icon">👔</div>
+                    <h3>YOOX</h3>
+                    <p>Moda con impatto</p>
+                </a>
+                <a href="https://www.aliexpress.com" target="_blank" class="card">
+                    <div class="card-icon">📦</div>
+                    <h3>AliExpress</h3>
+                    <p>Shopping etico</p>
+                </a>
+                <a href="#" onclick="showPage('affiliazioni'); return false;" class="card">
+                    <div class="card-icon">❤️</div>
+                    <h3>Altri Partner</h3>
+                    <p>Scopri tutti</p>
+                </a>
             </div>
         </div>
     </div>
 
-    <!-- RESULTS SECTION -->
-    <div class="results-container">
-        <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-        <div class="gcse-searchresults-only" data-autoSearchOnLoad="true"></div>
+    <!-- I NOSTRI VALORI PAGE -->
+    <div id="valori" class="page-section">
+        <div class="content-section">
+            <h1>I Nostri Valori</h1>
+            
+            <div class="content-block intro-block">
+                <p>Ogni giorno, miliardi di ricerche su Internet generano entrate pubblicitarie enormi. Ma cosa accadrebbe se anche solo una parte di quel valore potesse trasformarsi in aiuto concreto per chi vive una crisi umanitaria?</p>
+                <p><strong>Kindorya nasce proprio da questa idea.</strong> Un'iniziativa indipendente, creata da gente comune, con un obiettivo straordinario: trasformare un gesto quotidiano – cercare online – in un atto di solidarietà.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>👥 Chi Siamo</h2>
+                <p>Siamo persone comuni che credono nella forza delle piccole azioni. Non abbiamo alle spalle grandi organizzazioni, ma abbiamo un sogno: dare voce alla solidarietà attraverso il web e trasformare il nostro traffico Internet in speranza per i bisognosi.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>🎯 Cosa Facciamo</h2>
+                <p>Ogni volta che usi GazaAid per le tue ricerche, il valore generato dalle pagine e dai click diventa una risorsa concreta. Questi fondi non restano nelle mani delle grandi piattaforme: vengono raccolti per essere donati a operatori umanitari che ogni giorno portano aiuto sul campo. Così, senza spendere un euro in più, le tue ricerche si trasformano in un sostegno reale.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>💪 Commitment</h2>
+                <p>Ci impegniamo a migliorare costantemente il portale, per offrire un'esperienza di navigazione sempre più fluida, trasparente e utile. Il nostro obiettivo è costruire un motore solidale capace di generare donazioni nel tempo, sostenendo cause umanitarie e ambientali con continuità.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>💎 Trasparenza</h2>
+                <p>GazaAid è nato da un sogno semplice: trasformare ogni ricerca in un aiuto concreto. Lo faremo con serietà, investendo nel presente e costruendo fiducia per il futuro. Siamo solo all'inizio e non abbiamo ancora generato incassi. Ma ci impegniamo fin da subito a pubblicare, ogni donazione.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>✉️ Contatti</h2>
+                <p>Hai un'idea, un consiglio o vuoi collaborare con noi? Siamo aperti a chiunque voglia condividere questo percorso di solidarietà.</p>
+                <p><strong>📩 Scrivici a: info@kindorya.org</strong></p>
+            </div>
+        </div>
     </div>
+
+    <!-- SHOPPING PAGE -->
+    <div id="shopping" class="page-section">
+        <div class="content-section">
+            <h1>Shopping Solidale</h1>
+            
+            <div class="content-block intro-block">
+                <h2>Sostienici con i tuoi acquisti</h2>
+                <p>Anche un semplice acquisto può fare la differenza. Se fai shopping online, usa i pulsanti qui sotto: ogni clic o acquisto attraverso questi link genera una piccola rendita che Kindorya destina ai propri progetti di aiuto e ricostruzione.</p>
+                <p><strong>Non ti costa nulla, ma per chi ha bisogno vale tantissimo.</strong></p>
+            </div>
+
+            <div class="shopping-grid">
+                <a href="https://www.ebay.it" target="_blank" class="shopping-card">
+                    <div class="icon">🛍️</div>
+                    <h3>eBay</h3>
+                    <p>Marketplace globale</p>
+                </a>
+                
+                <a href="https://www.amazon.it" target="_blank" class="shopping-card">
+                    <div class="icon">📚</div>
+                    <h3>Amazon</h3>
+                    <p>Tutto ciò che ti serve</p>
+                </a>
+                
+                <a href="https://www.yoox.com" target="_blank" class="shopping-card">
+                    <div class="icon">👔</div>
+                    <h3>YOOX</h3>
+                    <p>Fashion & Design</p>
+                </a>
+                
+                <a href="https://www.zalando.it" target="_blank" class="shopping-card">
+                    <div class="icon">👟</div>
+                    <h3>Zalando</h3>
+                    <p>Moda e scarpe</p>
+                </a>
+                
+                <a href="https://www.aliexpress.com" target="_blank" class="shopping-card">
+                    <div class="icon">📦</div>
+                    <h3>AliExpress</h3>
+                    <p>Shopping internazionale</p>
+                </a>
+                
+                <a href="https://www.decathlon.it" target="_blank" class="shopping-card">
+                    <div class="icon">⚽</div>
+                    <h3>Decathlon</h3>
+                    <p>Sport e outdoor</p>
+                </a>
+                
+                <a href="https://www.iherb.com" target="_blank" class="shopping-card">
+                    <div class="icon">🌿</div>
+                    <h3>iHerb</h3>
+                    <p>Salute e benessere</p>
+                </a>
+                
+                <a href="#" class="shopping-card">
+                    <div class="icon">💻</div>
+                    <h3>Tech Partner</h3>
+                    <p>Elettronica e gadget</p>
+                </a>
+                
+                <a href="#" class="shopping-card">
+                    <div class="icon">🏠</div>
+                    <h3>Home & Living</h3>
+                    <p>Casa e arredamento</p>
+                </a>
+            </div>
+
+            <div class="content-block" style="margin-top: 40px; text-align: center; background: #e5fcfc;">
+                <h3>Invita i tuoi amici ad usare Kindorya</h3>
+                <p>Ogni persona che si unisce grazie a te aumenta l'impatto del progetto</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- COME FUNZIONA PAGE -->
+    <div id="come-funziona" class="page-section">
+        <div class="content-section">
+            <h1>Come Funziona</h1>
+            
+            <div class="content-block intro-block">
+                <p>Ogni volta che accediamo a Internet, lasciamo dietro di noi piccole tracce di valore. Ogni volta che navighi, cerchi qualcosa o clicchi su un annuncio, qualcuno guadagna grazie alla pubblicità. <strong>Noi vogliamo che quei guadagni diventino solidarietà!</strong></p>
+            </div>
+
+            <div class="content-block">
+                <h2>1️⃣ Usa la Barra di Ricerca</h2>
+                <p>Usando la nostra barra di ricerca, tutto rimane semplice come sempre — ma ogni tua azione genera una piccola donazione. Le pubblicità e gli annunci che già vedi ogni giorno continuano ad apparire, solo che questa volta una parte dei profitti va in beneficenza.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>2️⃣ Shopping Solidale</h2>
+                <p>Abbiamo anche creato una sezione "Shopping": se desideri fare acquisti online, entra nei tuoi negozi preferiti partendo da lì. In questo modo il contributo sarà ancora più grande, e non ti costerà nulla in più.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>3️⃣ La Pubblicità Necessaria</h2>
+                <p>Non amiamo la pubblicità, ma è necessaria ai nostri obiettivi: <strong>generare donazioni continue senza chiedere soldi!</strong> Ogni annuncio guardato, ogni click pubblicitario, ogni acquisto effettuato tramite i link nella sezione Shopping, genera una piccola donazione per sostenere i nostri progetti.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>4️⃣ Trasparenza Totale</h2>
+                <p>Tutti i fondi raccolti vengono pubblicati e rendicontati con trasparenza. Ogni donazione conta e fa la differenza per chi ha bisogno.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROGETTI PAGE -->
+    <div id="progetti" class="page-section">
+        <div class="content-section">
+            <h1>I Nostri Progetti</h1>
+            
+            <div class="content-block">
+                <p>Stiamo raccogliendo fondi per sostenere la Palestina, dove oggi serve tutto: cibo, cure e ricostruzione.</p>
+                <p>Il nostro impegno si concentra su tre aree fondamentali:</p>
+                <ul style="margin-top: 20px; line-height: 2;">
+                    <li><strong>Progetti alimentari</strong>, per garantire pasti e beni di prima necessità alle famiglie colpite.</li>
+                    <li><strong>Progetti sanitari</strong>, per fornire medicinali, supporto medico e assistenza ai più fragili.</li>
+                    <li><strong>Progetti di ricostruzione</strong>, per ridare speranza e dignità a chi ha perso la propria casa e il proprio lavoro.</li>
+                </ul>
+                <p style="margin-top: 20px;">Abbiamo appena iniziato questo percorso, ma crediamo nella forza della comunità e della solidarietà. Questa sezione verrà aggiornata regolarmente per mostrare i progressi che stiamo raggiungendo insieme.</p>
+            </div>
+
+            <div class="counter-card">
+                <div class="counter-label">Fondi Raccolti Finora</div>
+                <div class="counter-number">€ 0,00</div>
+                <div class="counter-label">Aggiornato al: [Data da aggiornare manualmente]</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- RISORSE PAGE -->
+    <div id="risorse" class="page-section">
+        <div class="content-section">
+            <h1>Risorse</h1>
+            
+            <div class="tabs-container">
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="showTab('articoli')">Articoli</button>
+                    <button class="tab-btn" onclick="showTab('magazines')">Magazines</button>
+                    <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
+                    <button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
+                    <button class="tab-btn" onclick="showTab('associazioni')">Associazioni</button>
+                </div>
+
+                <div id="articoli" class="tab-content active">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Articolo 1</h4>
+                            <p>Descrizione dell'articolo scritto da noi...</p>
+                            <a href="#">Leggi di più →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Articolo 2</h4>
+                            <p>Descrizione dell'articolo scritto da noi...</p>
+                            <a href="#">Leggi di più →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="magazines" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Magazine 1</h4>
+                            <p>Link ad articolo esterno...</p>
+                            <a href="#" target="_blank">Vai all'articolo →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Magazine 2</h4>
+                            <p>Link ad articolo esterno...</p>
+                            <a href="#" target="_blank">Vai all'articolo →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="instagram" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Creator Instagram 1</h4>
+                            <p>Descrizione creator...</p>
+                            <a href="#" target="_blank">Segui su Instagram →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Creator Instagram 2</h4>
+                            <p>Descrizione creator...</p>
+                            <a href="#" target="_blank">Segui su Instagram →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="youtube" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Canale YouTube 1</h4>
+                            <p>Descrizione canale...</p>
+                            <a href="#" target="_blank">Guarda su YouTube →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Canale YouTube 2</h4>
+                            <p>Descrizione canale...</p>
+                            <a href="#" target="_blank">Guarda su YouTube →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="associazioni" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 1</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 2</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 3</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><p>Il 100% dei ricavi generati dalle tue ricerche e dai tuoi acquisti viene devoluto a organizzazioni benefiche verificate. Non tratteniamo nulla per noi - ogni singolo centesimo viene donato. Pubblichiamo report trimestrali dettagliati che mostrano esattamente quanto è stato raccolto e a quali organizzazioni è stato donato.</p>
+            </div>
+
+            <div class="content-block">
+                <h2>4️⃣ Monitora il Tuo Impatto</h2>
+                <p>Crediamo nella trasparenza totale. Sul nostro sito puoi vedere statistiche aggiornate su quanto è stato raccolto complessivamente, quante persone stanno partecipando e quali progetti sono stati finanziati grazie al contributo della nostra comunità. Ogni trimestre pubblichiamo report dettagliati con la rendicontazione completa di tutti i fondi raccolti e distribuiti.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ PAGE -->
+    <div id="faq" class="page-section">
+        <div class="content-section">
+            <h1>Domande Frequenti</h1>
+            
+            <div class="content-block intro-block">
+                <p>Hai domande sul progetto? Qui trovi le risposte alle domande più comuni. Se non trovi quello che cerchi, scrivici!</p>
+            </div>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Quanto costa utilizzare Kindorya?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Kindorya è completamente gratuito! Non c'è alcun costo per utilizzare il nostro motore di ricerca o per fare acquisti attraverso i nostri link affiliati. Quando fai shopping tramite i nostri partner, paghi esattamente lo stesso prezzo che pagheresti andando direttamente sul loro sito.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Come guadagnate i soldi da donare?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Generiamo ricavi in due modi: attraverso gli annunci pubblicitari mostrati nei risultati di ricerca (tramite Google AdSense) e attraverso commissioni di affiliazione quando fai acquisti cliccando sui link dei nostri partner nella sezione Shopping.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    A chi vanno le donazioni?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    I fondi raccolti vengono destinati a progetti umanitari in Palestina, concentrandoci su tre aree: progetti alimentari, progetti sanitari e progetti di ricostruzione. Collaboriamo con operatori umanitari verificati che operano direttamente sul campo.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Posso vedere dove vanno i miei contributi?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Assolutamente sì! La trasparenza è uno dei nostri valori fondamentali. Ci impegniamo a pubblicare ogni donazione effettuata. La sezione "Progetti" viene aggiornata regolarmente con i progressi raggiunti.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Come posso massimizzare il mio impatto?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Usa Kindorya come motore di ricerca principale, fai i tuoi acquisti online attraverso la sezione Shopping, e soprattutto invita amici e familiari ad usare la piattaforma. Più persone si uniscono, maggiore è l'impatto che possiamo generare insieme!
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    I miei dati di ricerca sono al sicuro?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sì! Utilizziamo Google Custom Search per fornire i risultati di ricerca, che applica gli stessi standard di privacy e sicurezza di Google. Non raccogliamo, conserviamo o vendiamo i tuoi dati personali.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Posso collaborare con voi?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Certamente! Siamo aperti a chiunque voglia condividere questo percorso di solidarietà. Hai un'idea, un consiglio o vuoi collaborare? Scrivici a info@kindorya.org
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTATTI PAGE rimossa, spostata in FAQ -->
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2024 SearchForGood - Tutti i diritti riservati</p>
+        <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
+
+    <script>
+        // Navigation function
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(pageId).classList.add('active');
+            
+            event.target.classList.add('active');
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Tab function for Risorse page
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // FAQ toggle function
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const toggle = element.querySelector('.faq-toggle');
+            toggle.textContent = element.classList.contains('active') ? '−' : '+';
+        }
+    </script>
 </body>
 </html>
