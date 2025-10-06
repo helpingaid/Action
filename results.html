@@ -326,8 +326,10 @@
     <div class="search-header">
         <div class="search-wrapper">
             <div class="search-container">
-                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-                <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false" data-autoSearchOnLoad="true"></div>
+                <form action="results.html" method="get" id="searchForm">
+                    <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+                    <div class="gcse-searchbox-only" data-resultsUrl="results.html"></div>
+                </form>
             </div>
         </div>
     </div>
@@ -335,7 +337,7 @@
     <!-- RESULTS SECTION -->
     <div class="results-container">
         <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-        <div class="gcse-searchresults-only" data-autoSearchOnLoad="true"></div>
+        <div class="gcse-searchresults-only"></div>
     </div>
 
     <!-- FOOTER -->
@@ -343,5 +345,65 @@
         <p>&copy; 2024 SearchForGood - Tutti i diritti riservati</p>
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
+
+    <script>
+        // Prevent infinite loop and handle searches properly
+        let searchHandled = false;
+
+        window.addEventListener('load', function() {
+            // Get query from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const query = urlParams.get('q');
+            
+            // Auto-execute search from URL parameter
+            if (query && !searchHandled) {
+                searchHandled = true;
+                setTimeout(function() {
+                    const searchInput = document.querySelector('.gsc-input input');
+                    if (searchInput) {
+                        searchInput.value = query;
+                        // Trigger the search without redirect
+                        const event = new KeyboardEvent('keydown', {
+                            key: 'Enter',
+                            code: 'Enter',
+                            keyCode: 13,
+                            which: 13
+                        });
+                        searchInput.dispatchEvent(event);
+                    }
+                }, 1500);
+            }
+
+            // Handle new searches from this page
+            setTimeout(function() {
+                const searchInput = document.querySelector('.gsc-input input');
+                const searchButton = document.querySelector('.gsc-search-button');
+                
+                if (searchInput) {
+                    searchInput.addEventListener('keypress', function(e) {
+                        if (e.key === 'Enter' && searchHandled) {
+                            e.preventDefault();
+                            const newQuery = searchInput.value;
+                            if (newQuery && newQuery !== query) {
+                                window.location.href = 'results.html?q=' + encodeURIComponent(newQuery);
+                            }
+                        }
+                    });
+                }
+                
+                if (searchButton) {
+                    searchButton.addEventListener('click', function(e) {
+                        if (searchHandled) {
+                            e.preventDefault();
+                            const newQuery = searchInput.value;
+                            if (newQuery && newQuery !== query) {
+                                window.location.href = 'results.html?q=' + encodeURIComponent(newQuery);
+                            }
+                        }
+                    });
+                }
+            }, 2000);
+        });
+    </script>
 </body>
 </html>
