@@ -144,6 +144,19 @@ nav a:hover, nav a.active {
     width: 100% !important;
 }
 
+.gsc-table-result {
+    width: 100% !important;
+}
+
+table.gsc-search-box {
+    width: 100% !important;
+    margin: 0 !important;
+}
+
+td.gsc-input {
+    width: 100% !important;
+}
+
 .gsc-input-box {
     background: white !important;
     border: 1px solid #1e3c72 !important;
