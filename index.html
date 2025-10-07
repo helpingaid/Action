@@ -117,7 +117,6 @@
             width: 100%;
             margin: 0 auto 20px;
             position: relative;
-            /* Ho rimosso il padding per allargare la barra di ricerca */
         }
 
         .search-container input {
@@ -146,6 +145,7 @@
         form.gsc-search-box-v2 {
             display: flex !important;
             width: 100% !important;
+            gap: 10px; /* Aggiunge spazio tra input e bottone */
         }
 
         /* Fa in modo che il box dell'input cresca per riempire lo spazio */
@@ -157,9 +157,6 @@
             height: 36px !important;
             display: flex !important;
             align-items: center !important;
-            border-right: none !important;
-            border-top-right-radius: 0 !important;
-            border-bottom-right-radius: 0 !important;
         }
 
         /* Stile per l'input effettivo */
@@ -172,18 +169,17 @@
             border: none !important;
             outline: none !important;
         }
-        
+
         /* Stile per il pulsante di ricerca */
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
-            border: 1px solid #ff8c42 !important;
+            border: none !important;
             padding: 0 15px !important;
             border-radius: 8px !important;
-            border-top-left-radius: 0 !important;
-            border-bottom-left-radius: 0 !important;
             height: 36px !important;
             width: auto !important;
             cursor: pointer !important;
+            flex-shrink: 0; /* Impedisce al bottone di restringersi */
         }
 
         .gsc-search-button-v2 svg {
@@ -191,8 +187,8 @@
             height: 16px !important;
             fill: white !important;
         }
-
-        /* Nasconde elementi non necessari */
+        
+        /* Nasconde elementi non necessari come la "x" per cancellare */
         .gsc-search-box .gsc-clear-button {
             display: none !important;
         }
@@ -1003,7 +999,224 @@
             
             <div class="tabs-container">
                 <div class="tabs">
-                    <button class="tab-btn active" onc
+                    <button class="tab-btn active" onclick="showTab('articoli')">Articoli</button>
+                    <button class="tab-btn" onclick="showTab('magazines')">Magazines</button>
+                    <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
+                    <button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
+                    <button class="tab-btn" onclick="showTab('associazioni')">Associazioni</button>
+                </div>
 
+                <div id="articoli" class="tab-content active">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Articolo 1</h4>
+                            <p>Descrizione dell'articolo scritto da noi...</p>
+                            <a href="#">Leggi di più →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Articolo 2</h4>
+                            <p>Descrizione dell'articolo scritto da noi...</p>
+                            <a href="#">Leggi di più →</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div id="magazines" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Magazine 1</h4>
+                            <p>Link ad articolo esterno...</p>
+                            <a href="#" target="_blank">Vai all'articolo →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Magazine 2</h4>
+                            <p>Link ad articolo esterno...</p>
+                            <a href="#" target="_blank">Vai all'articolo →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="instagram" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Creator Instagram 1</h4>
+                            <p>Descrizione creator...</p>
+                            <a href="#" target="_blank">Segui su Instagram →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Creator Instagram 2</h4>
+                            <p>Descrizione creator...</p>
+                            <a href="#" target="_blank">Segui su Instagram →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="youtube" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>Canale YouTube 1</h4>
+                            <p>Descrizione canale...</p>
+                            <a href="#" target="_blank">Guarda su YouTube →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>Canale YouTube 2</h4>
+                            <p>Descrizione canale...</p>
+                            <a href="#" target="_blank">Guarda su YouTube →</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="associazioni" class="tab-content">
+                    <div class="resource-grid">
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 1</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 2</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                        <div class="resource-card">
+                            <h4>🏥 Associazione 3</h4>
+                            <p>Descrizione dell'associazione che opera a Gaza...</p>
+                            <a href="#" target="_blank">Visita sito →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ PAGE -->
+    <div id="faq" class="page-section">
+        <div class="content-section">
+            <h1>Domande Frequenti</h1>
+            
+            <div class="content-block intro-block">
+                <p>Hai domande sul progetto? Qui trovi le risposte alle domande più comuni. Se non trovi quello che cerchi, scrivici!</p>
+            </div>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Quanto costa utilizzare Kindorya?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Kindorya è completamente gratuito! Non c'è alcun costo per utilizzare il nostro motore di ricerca o per fare acquisti attraverso i nostri link affiliati. Quando fai shopping tramite i nostri partner, paghi esattamente lo stesso prezzo che pagheresti andando direttamente sul loro sito.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Come guadagnate i soldi da donare?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Generiamo ricavi in due modi: attraverso gli annunci pubblicitari mostrati nei risultati di ricerca (tramite Google AdSense) e attraverso commissioni di affiliazione quando fai acquisti cliccando sui link dei nostri partner nella sezione Shopping.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    A chi vanno le donazioni?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    I fondi raccolti vengono destinati a progetti umanitari in Palestina, concentrandoci su tre aree: progetti alimentari, progetti sanitari e progetti di ricostruzione. Collaboriamo con operatori umanitari verificati che operano direttamente sul campo.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Posso vedere dove vanno i miei contributi?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Assolutamente sì! La trasparenza è uno dei nostri valori fondamentali. Ci impegniamo a pubblicare ogni donazione effettuata. La sezione "Progetti" viene aggiornata regolarmente con i progressi raggiunti.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Come posso massimizzare il mio impatto?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Usa Kindorya come motore di ricerca principale, fai i tuoi acquisti online attraverso la sezione Shopping, e soprattutto invita amici e familiari ad usare la piattaforma. Più persone si uniscono, maggiore è l'impatto che possiamo generare insieme!
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    I miei dati di ricerca sono al sicuro?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Sì! Utilizziamo Google Custom Search per fornire i risultati di ricerca, che applica gli stessi standard di privacy e sicurezza di Google. Non raccogliamo, conserviamo o vendiamo i tuoi dati personali.
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    Posso collaborare con voi?
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    Certamente! Siamo aperti a chiunque voglia condividere questo percorso di solidarietà. Hai un'idea, un consiglio o vuoi collaborare? Scrivici a info@kindorya.org
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTATTI PAGE rimossa, spostata in FAQ -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
+        <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
+    </footer>
+
+    <script>
+        // Navigation function
+        function showPage(pageId) {
+            document.querySelectorAll('.page-section').forEach(page => {
+                page.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+            });
+            
+            document.getElementById(pageId).classList.add('active');
+            
+            event.target.classList.add('active');
+            
+            window.scrollTo(0, 0);
+        }
+
+        // Tab function for Risorse page
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // FAQ toggle function
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const toggle = element.querySelector('.faq-toggle');
+            toggle.textContent = element.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+</body>
+</html>
 
