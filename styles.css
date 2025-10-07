@@ -41,12 +41,25 @@ header {
     font-weight: 700;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 12px;
+    text-decoration: none;
+    color: white;
+    transition: opacity 0.3s;
+}
+
+.logo:hover {
+    opacity: 0.9;
 }
 
 .logo img {
-    height: 40px;
+    height: 50px;
     width: auto;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
 }
 
 nav {
@@ -418,16 +431,16 @@ table.gsc-input {
 .shopping-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
+    gap: 15px;
     margin-top: 30px;
 }
 
 .shopping-card {
     background: white;
-    padding: 40px 30px;
-    border-radius: 12px;
+    padding: 20px 15px;
+    border-radius: 10px;
     text-align: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: all 0.3s;
     text-decoration: none;
     color: inherit;
@@ -435,23 +448,23 @@ table.gsc-input {
 }
 
 .shopping-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(255, 140, 66, 0.2);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 140, 66, 0.2);
 }
 
 .shopping-card .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
+    font-size: 32px;
+    margin-bottom: 10px;
 }
 
 .shopping-card h3 {
     color: #1e3c72;
-    margin-bottom: 8px;
-    font-size: 20px;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
 
 .shopping-card p {
-    font-size: 14px;
+    font-size: 12px;
 }
 
 /* PROGETTI COUNTER */
@@ -526,10 +539,11 @@ table.gsc-input {
 
 .resource-card {
     background: white;
-    padding: 20px;
+    padding: 0;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     transition: all 0.3s;
+    overflow: hidden;
 }
 
 .resource-card:hover {
@@ -537,15 +551,36 @@ table.gsc-input {
     box-shadow: 0 5px 15px rgba(0,0,0,0.12);
 }
 
+.resource-card-image {
+    width: 100%;
+    height: 200px;
+    background: #e5fcfc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+}
+
+.resource-card-content {
+    padding: 20px;
+}
+
 .resource-card h4 {
     color: #1e3c72;
     margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .resource-card p {
     color: #666;
     font-size: 14px;
     line-height: 1.6;
+    display: -webkit-box;
+    -webkit-line-clamp: 7;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-height: 150px;
 }
 
 .resource-card a {
