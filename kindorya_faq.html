@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Kindorya</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3S3CX0L4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TP3S3CX0L4');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://i.imgur.com/yourimagelink.png" alt="Kindorya">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="valori.html">Valori</a>
+                <a href="come-funziona.html">Come Funziona</a>
+                <a href="shopping.html">Shopping</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="risorse.html">Risorse</a>
+                <a href="faq.html" class="active">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content-section">
+        <h1>Domande Frequenti</h1>
+        
+        <div class="content-block intro-block">
+            <p>Hai domande sul progetto? Qui trovi le risposte alle domande più comuni. Se non trovi quello che cerchi, scrivici!</p>
+        </div>
+        
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                Quanto costa utilizzare Kindorya?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Kindorya è completamente gratuito! Non c'è alcun costo per utilizzare il nostro motore di ricerca o per fare acquisti attraverso i nostri link affiliati. Quando fai shopping tramite i nostri partner, paghi esattamente lo stesso prezzo che pagheresti andando direttamente sul loro sito.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                Come guadagnate i soldi da donare?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Generiamo ricavi in due modi: attraverso gli annunci pubblicitari mostrati nei risultati di ricerca (tramite Google AdSense) e attraverso commissioni di affiliazione quando fai acquisti cliccando sui link dei nostri partner nella sezione Shopping.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                A chi vanno le donazioni?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                I fondi raccolti vengono destinati a progetti umanitari in Palestina, concentrandoci su tre aree: progetti alimentari, progetti sanitari e progetti di ricostruzione. Collaboriamo con operatori umanitari verificati che operano direttamente sul campo.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                Posso vedere dove vanno i miei contributi?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Assolutamente sì! La trasparenza è uno dei nostri valori fondamentali. Ci impegniamo a pubblicare ogni donazione effettuata. La sezione "Progetti" viene aggiornata regolarmente con i progressi raggiunti.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                Come posso massimizzare il mio impatto?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Usa Kindorya come motore di ricerca principale, fai i tuoi acquisti online attraverso la sezione Shopping, e soprattutto invita amici e familiari ad usare la piattaforma. Più persone si uniscono, maggiore è l'impatto che possiamo generare insieme!
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                I miei dati di ricerca sono al sicuro?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Sì! Utilizziamo Google Custom Search per fornire i risultati di ricerca, che applica gli stessi standard di privacy e sicurezza di Google. Non raccogliamo, conserviamo o vendiamo i tuoi dati personali.
+            </div>
+        </div>
+
+        <div class="faq-item" onclick="toggleFaq(this)">
+            <div class="faq-question">
+                Posso collaborare con voi?
+                <span class="faq-toggle">+</span>
+            </div>
+            <div class="faq-answer">
+                Certamente! Siamo aperti a chiunque voglia condividere questo percorso di solidarietà. Hai un'idea, un consiglio o vuoi collaborare? Scrivici a info@kindorya.org
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
+        <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+            const toggle = element.querySelector('.faq-toggle');
+            toggle.textContent = element.classList.contains('active') ? '−' : '+';
+        }
+    </script>
+</body>
+</html>
