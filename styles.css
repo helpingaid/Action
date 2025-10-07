@@ -52,14 +52,15 @@ header {
 }
 
 .logo img {
-    height: 50px;
-    width: auto;
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
 }
 
 .logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: white;
+    color: #ff8c42;
 }
 
 nav {
@@ -437,34 +438,45 @@ table.gsc-input {
 
 .shopping-card {
     background: white;
-    padding: 20px 15px;
-    border-radius: 10px;
+    padding: 10px;
+    border-radius: 8px;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
     transition: all 0.3s;
     text-decoration: none;
     color: inherit;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
 }
 
 .shopping-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(255, 140, 66, 0.2);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(255, 140, 66, 0.2);
 }
 
 .shopping-card .icon {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e5fcfc;
+    border-radius: 8px;
 }
 
 .shopping-card h3 {
     color: #1e3c72;
-    margin-bottom: 5px;
-    font-size: 16px;
+    margin-bottom: 4px;
+    font-size: 14px;
 }
 
 .shopping-card p {
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* PROGETTI COUNTER */
