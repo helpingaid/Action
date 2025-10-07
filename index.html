@@ -80,23 +80,21 @@
 
         /* HERO SECTION - RIDOTTO DI 1/3 */
         .hero {
-            background: #e5fcfc;
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
             padding: 50px 40px;
             text-align: center;
-            color: #1e3c72;
+            color: white;
         }
 
         .hero h1 {
             font-size: 36px;
             margin-bottom: 10px;
-            color: #1e3c72;
         }
 
         .hero .subtitle {
             font-size: 16px;
             margin-bottom: 30px;
-            opacity: 0.8;
-            color: #1e3c72;
+            opacity: 0.9;
         }
 
         .search-container {
@@ -107,18 +105,17 @@
 
         .search-container input {
             width: 100%;
-            padding: 6px 60px 6px 15px;
-            border: 1px solid #1e3c72;
-            background: white;
-            border-radius: 8px;
-            font-size: 14px;
+            padding: 12px 60px 12px 20px;
+            border: 1px solid rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.15);
+            border-radius: 10px;
+            font-size: 16px;
             outline: none;
-            color: #1e3c72;
-            height: 36px;
+            color: white;
         }
 
         .search-container input::placeholder {
-            color: rgba(30, 60, 114, 0.5);
+            color: rgba(255,255,255,0.7);
         }
 
         /* Google CSE Custom Styling - RIDOTTO */
@@ -131,42 +128,39 @@
         }
 
         .gsc-input-box {
-            background: white !important;
-            border: 1px solid #1e3c72 !important;
-            border-radius: 8px !important;
-            height: 36px !important;
+            background: rgba(255,255,255,0.15) !important;
+            border: 1px solid rgba(255,255,255,0.3) !important;
+            border-radius: 10px !important;
+            height: auto !important;
         }
 
         .gsc-input {
             background: transparent !important;
-            color: #1e3c72 !important;
-            padding: 6px 15px !important;
-            font-size: 14px !important;
-            height: 36px !important;
+            color: white !important;
+            padding: 10px 20px !important;
+            font-size: 16px !important;
         }
 
         .gsc-search-button {
             background: #ff8c42 !important;
             border: none !important;
-            border-radius: 6px !important;
-            padding: 0 15px !important;
+            border-radius: 8px !important;
+            padding: 8px 20px !important;
             margin-left: 5px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            min-height: 36px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 0 15px !important;
-            border-radius: 6px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            padding: 8px 20px !important;
+            border-radius: 8px !important;
+            min-height: 36px !important;
         }
 
         .gsc-search-button svg {
-            width: 14px !important;
-            height: 14px !important;
+            width: 16px !important;
+            height: 16px !important;
         }
 
         .gsst_a {
@@ -254,66 +248,61 @@
             font-size: 14px;
             margin-top: 15px;
             opacity: 0.85;
-            color: #1e3c72;
         }
 
-        /* CARDS SECTION - DIMEZZATE */
+        /* CARDS SECTION */
         .cards-section {
-            padding: 20px 40px;
+            padding: 60px 40px;
             background: #f9fafb;
         }
 
         .cards-section h2 {
             text-align: center;
             color: #1e3c72;
-            margin-bottom: 15px;
-            font-size: 20px;
+            margin-bottom: 40px;
+            font-size: 32px;
         }
 
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .card {
             background: white;
-            padding: 8px 12px;
-            border-radius: 6px;
+            padding: 30px;
+            border-radius: 12px;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
-            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             text-decoration: none;
             color: inherit;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 30px;
+            display: block;
         }
 
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 10px rgba(255, 140, 66, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(255, 140, 66, 0.2);
         }
 
         .card-icon {
-            font-size: 18px;
-            margin-bottom: 3px;
+            font-size: 42px;
+            margin-bottom: 15px;
         }
 
         .card h3 {
             color: #1e3c72;
-            margin-bottom: 2px;
-            font-size: 12px;
+            margin-bottom: 10px;
+            font-size: 19px;
         }
 
         .card p {
             color: #666;
-            font-size: 10px;
+            font-size: 14px;
         }
 
         /* CONTENT SECTION */
@@ -578,7 +567,7 @@
             <div class="search-container">
                 <!-- Google CSE Search Box -->
                 <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
-                <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false"></div>
+                <div class="gcse-searchbox-only"></div>
             </div>
             <p class="reminder">📌 Impostaci come homepage e salvaci tra i preferiti</p>
         </div>
@@ -606,6 +595,23 @@
                     <h3>Altri Partner</h3>
                     <p>Scopri tutti</p>
                 </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- RESULTS PAGE -->
+    <div id="results" class="page-section">
+        <div class="results-container">
+            <div class="search-container" style="max-width: 100%; margin-bottom: 30px;">
+                <!-- Google CSE Search Box for Results Page -->
+                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+                <div class="gcse-searchbox-only"></div>
+            </div>
+            
+            <!-- Google CSE Results -->
+            <div id="google-cse-container">
+                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+                <div class="gcse-searchresults-only"></div>
             </div>
         </div>
     </div>
@@ -786,10 +792,4 @@
                 </div>
             </div>
 
-            <div class="faq-item" onclick="toggleFaq(this)">
-                <div class="faq-question">
-                    Come posso massimizzare il mio impatto?
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    Ci sono diversi modi: imposta SearchForGood come motore di ricerca predefinito
+            <div class="faq
