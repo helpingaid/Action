@@ -96,6 +96,14 @@ nav a:hover, nav a.active {
     padding: 0 20px;
 }
 
+.search-container .gcse-searchbox-only {
+    width: 100% !important;
+}
+
+.search-container .gsc-search-box {
+    width: 100% !important;
+}
+
 .search-container input {
     width: 100%;
     padding: 6px 60px 6px 15px;
@@ -116,19 +124,23 @@ nav a:hover, nav a.active {
 .gcse-searchbox-only {
     background: transparent !important;
     width: 100% !important;
+    display: block !important;
 }
 
 .gsc-search-box {
     margin: 0 !important;
     width: 100% !important;
+    display: block !important;
 }
 
 .gsc-search-box-tools {
     width: 100% !important;
+    display: block !important;
 }
 
 .gsc-search-box table {
     width: 100% !important;
+    display: table !important;
 }
 
 .gsc-control-cse {
