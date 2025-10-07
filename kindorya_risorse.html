@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risorse - Kindorya</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3S3CX0L4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TP3S3CX0L4');
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <img src="https://i.imgur.com/yourimagelink.png" alt="Kindorya">
+            </div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="valori.html">Valori</a>
+                <a href="come-funziona.html">Come Funziona</a>
+                <a href="shopping.html">Shopping</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="risorse.html" class="active">Risorse</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="content-section">
+        <h1>Risorse</h1>
+        
+        <div class="tabs-container">
+            <div class="tabs">
+                <button class="tab-btn active" onclick="showTab('articoli')">Articoli</button>
+                <button class="tab-btn" onclick="showTab('magazines')">Magazines</button>
+                <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
+                <button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
+                <button class="tab-btn" onclick="showTab('associazioni')">Associazioni</button>
+            </div>
+
+            <div id="articoli" class="tab-content active">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Articolo 1</h4>
+                        <p>Descrizione dell'articolo scritto da noi...</p>
+                        <a href="#">Leggi di più →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Articolo 2</h4>
+                        <p>Descrizione dell'articolo scritto da noi...</p>
+                        <a href="#">Leggi di più →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="magazines" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Magazine 1</h4>
+                        <p>Link ad articolo esterno...</p>
+                        <a href="#" target="_blank">Vai all'articolo →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Magazine 2</h4>
+                        <p>Link ad articolo esterno...</p>
+                        <a href="#" target="_blank">Vai all'articolo →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="instagram" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Creator Instagram 1</h4>
+                        <p>Descrizione creator...</p>
+                        <a href="#" target="_blank">Segui su Instagram →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Creator Instagram 2</h4>
+                        <p>Descrizione creator...</p>
+                        <a href="#" target="_blank">Segui su Instagram →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="youtube" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>Canale YouTube 1</h4>
+                        <p>Descrizione canale...</p>
+                        <a href="#" target="_blank">Guarda su YouTube →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>Canale YouTube 2</h4>
+                        <p>Descrizione canale...</p>
+                        <a href="#" target="_blank">Guarda su YouTube →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div id="associazioni" class="tab-content">
+                <div class="resource-grid">
+                    <div class="resource-card">
+                        <h4>🏥 Associazione 1</h4>
+                        <p>Descrizione dell'associazione che opera a Gaza...</p>
+                        <a href="#" target="_blank">Visita sito →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🏥 Associazione 2</h4>
+                        <p>Descrizione dell'associazione che opera a Gaza...</p>
+                        <a href="#" target="_blank">Visita sito →</a>
+                    </div>
+                    <div class="resource-card">
+                        <h4>🏥 Associazione 3</h4>
+                        <p>Descrizione dell'associazione che opera a Gaza...</p>
+                        <a href="#" target="_blank">Visita sito →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
+        <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
+    </footer>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.classList.remove('active');
+            });
+            
+            document.getElementById(tabId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
