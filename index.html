@@ -117,6 +117,7 @@
             width: 100%;
             margin: 0 auto 20px;
             position: relative;
+            padding: 0 40px;
         }
 
         .search-container input {
@@ -135,23 +136,23 @@
             color: rgba(30, 60, 114, 0.5);
         }
 
-        /* Google CSE Custom Styling - TABLE-SAFE FIX */
-        .gcse-searchbox-only,
-        form.gsc-search-box-v2,
-        .gsc-search-box-tools,
+        /* Google CSE Custom Styling - RIDOTTO */
+        .gcse-searchbox-only {
+            background: transparent !important;
+            width: 100% !important;
+        }
+
         .gsc-search-box {
-            width: 100% !important;
-            padding: 0 !important;
             margin: 0 !important;
-        }
-
-        table.gsc-search-box {
             width: 100% !important;
-            table-layout: fixed !important; /* Crucial for width control */
         }
 
-        td.gsc-input {
-            padding-right: 10px !important; /* Space between input and button */
+        .gsc-search-box-tools {
+            width: 100% !important;
+        }
+
+        .gsc-search-box table {
+            width: 100% !important;
         }
 
         .gsc-input-box {
@@ -159,35 +160,74 @@
             border: 1px solid #1e3c72 !important;
             border-radius: 8px !important;
             height: 36px !important;
+            display: flex !important;
+            align-items: center !important;
+            width: 100% !important;
         }
 
-        input.gsc-input {
-            background: none !important;
+        .gsc-input input {
+            background: transparent !important;
             color: #1e3c72 !important;
             padding: 0 15px !important;
             font-size: 14px !important;
-            height: 100% !important;
+            height: 36px !important;
+            line-height: 36px !important;
+            vertical-align: middle !important;
+            display: flex !important;
+            align-items: center !important;
+            width: 100% !important;
+        }
+
+        .gsc-input {
+            display: flex !important;
+            align-items: center !important;
+            height: 36px !important;
+            width: 100% !important;
+        }
+
+        table.gsc-input {
+            height: 36px !important;
+            width: 100% !important;
+        }
+
+        .gsc-input td {
+            vertical-align: middle !important;
+        }
+
+        .gsib_a {
+            width: 100% !important;
+        }
+
+        .gsib_b {
+            width: 100% !important;
+        }
+
+        .gsc-search-button {
+            background: #ff8c42 !important;
             border: none !important;
-            outline: none !important;
+            border-radius: 6px !important;
+            padding: 0 15px !important;
+            margin-left: 5px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
             padding: 0 15px !important;
-            border-radius: 8px !important;
-            height: 36px !important;
-            cursor: pointer !important;
+            border-radius: 6px !important;
+            height: 32px !important;
+            min-height: 32px !important;
         }
 
-        .gsc-search-button-v2 svg {
-            width: 16px !important;
-            height: 16px !important;
-            fill: white !important;
+        .gsc-search-button svg {
+            width: 14px !important;
+            height: 14px !important;
         }
-        
-        .gsc-search-box .gsc-clear-button {
-            display: none !important;
+
+        .gsst_a {
+            padding: 5px 10px !important;
         }
 
         /* RESULTS PAGE STYLING */
@@ -733,6 +773,10 @@
                 font-size: 28px;
             }
 
+            .search-container {
+                padding: 0 10px;
+            }
+
             .cards-section {
                 padding: 20px;
             }
@@ -1081,10 +1125,6 @@
                             <a href="#" target="_blank">Visita sito →</a>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <!-- FAQ PAGE -->
     <div id="faq" class="page-section">
@@ -1216,4 +1256,3 @@
     </script>
 </body>
 </html>
-
