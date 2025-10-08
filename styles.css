@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Centrale Sans Book', sans-serif;
+    font-family: 'Corbel', 'Arial', 'Tahoma', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
     width: 100%;
@@ -340,7 +340,7 @@ table.gsc-input {
     color: #1e3c72;
     margin-bottom: 15px;
     font-size: 20px;
-    font-weight: normal; /* AGGIUNTO */
+    font-weight: normal; 
 }
 
 .cards {
