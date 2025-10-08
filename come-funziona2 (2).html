@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Come Funziona - Kindorya</title>
+    
+    <!-- CSS fornito dall'utente, integrato nel file unico -->
+    <style>
+        /* RESET */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* Uso Corbel come specificato nel CSS */
+            font-family: 'Corbel', 'Arial', 'Tahoma', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        html {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* HEADER */
+        header {
+            background: #FBFCFC;
+            padding: 15px 40px;
+            color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+            transition: opacity 0.3s;
+        }
+
+        .logo:hover {
+            opacity: 0.9;
+        }
+
+        .logo img {
+            height: 40px;
+            width: 40px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ff8c42; /* Colore Brand Arancione */
+        }
+
+        nav {
+            display: flex;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        nav a {
+            color: #1e3c72; /* Ho cambiato in Blu Scuro per coerenza con il resto del testo e per la navigazione */
+            text-decoration: none;
+            transition: color 0.3s;
+            white-space: nowrap;
+            padding: 5px 0; /* Aggiunto padding per l'area di hover */
+        }
+
+        nav a:hover, nav a.active {
+            color: #ff8c42; /* Arancione per hover e link attivo */
+        }
+
+        /* CONTENT PAGES */
+        .content-section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .content-section h1 {
+            color: #1e3c72;
+            margin-bottom: 30px;
+            font-size: 38px;
+            text-align: center; /* Aggiunto per centrare il titolo principale */
+        }
+
+        .content-block {
+            background: white;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            height: 100%; /* Garantisce che i blocchi nella griglia siano tutti alti uguali */
+        }
+
+        .content-block h2 {
+            color: #1e3c72;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        .content-block p {
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .intro-block {
+            background: #e5fcfc !important;
+            text-align: center;
+            padding: 40px !important;
+            border-left: 5px solid #ff8c42; /* Aggiunto un bordo per enfasi */
+        }
+        
+        /* FOOTER */
+        footer {
+            background: #1e3c72; /* Blu Scuro Brand */
+            color: white;
+            padding: 40px;
+            text-align: center;
+            margin-top: auto; /* Spinge il footer in fondo */
+        }
+
+        footer p {
+            opacity: 0.9;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            header {
+                padding: 15px 20px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            nav {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .content-section {
+                padding: 40px 20px;
+            }
+
+            /* La griglia dei 4 blocchi si adatta su schermi piccoli */
+            .content-grid { 
+                grid-template-columns: 1fr !important;
+            }
+
+            footer {
+                padding: 30px 20px;
+            }
+        }
+
+        /* Responsive per la griglia dei contenuti */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Griglia flessibile */
+            gap: 20px;
+            margin-top: 30px;
+        }
+    </style>
+    
+    <!-- Google Analytics Script -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3S3CX0L4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-TP3S3CX0L4');
+    </script>
+</head>
+<body>
+    <!-- Intestazione (Header) -->
+    <header>
+        <div class="header-content">
+            <!-- Logo -->
+            <div class="logo">
+                <!-- Immagine e testo logo -->
+                <!-- Immagine logo aggiornata con il link fornito -->
+                <img src="https://raw.githubusercontent.com/helpingaid/Action/main/Albero.png" alt="Logo Kindorya - Albero">
+                <span class="logo-text">Kindorya</span>
+            </div>
+            
+            <!-- Navigazione (Nav) -->
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="valori.html">Valori</a>
+                <a href="come-funziona.html" class="active">Come Funziona</a>
+                <a href="shopping.html">Shopping</a>
+                <a href="progetti.html">Progetti</a>
+                <a href="risorse.html">Risorse</a>
+                <a href="faq.html">FAQ</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sezione Contenuto Principale -->
+    <div class="content-section">
+        <h1>Come Funziona</h1>
+        
+        <!-- Blocco Introduttivo -->
+        <div class="content-block intro-block">
+            <p style="color: #1e3c72; font-size: 18px;">Ogni volta che accediamo a Internet, lasciamo dietro di noi piccole tracce di valore.<br>
+             Ogni volta che navighi, cerchi qualcosa o clicchi su un annuncio, qualcuno guadagna grazie alla pubblicità. <br> 
+             <strong><span style="color: #ff8c42;">Noi vogliamo che quei guadagni diventino solidarietà !</span></strong></p>
+        </div>
+
+        <!-- Blocchi Dettaglio (Griglia responsive) -->
+        <div class="content-grid">
+            
+            <!-- Blocco 1: Barra di Ricerca -->
+            <div class="content-block">
+                <h2>Usa la Barra di Ricerca</h2>
+                <p>Usando la nostra barra di ricerca, tutto rimane semplice come sempre ma ogni tua azione genera una piccola donazione. <br>
+                Le pubblicità e gli annunci che già vedi ogni giorno continuano ad apparire, solo che questa volta una parte dei profitti va in beneficenza.</p>
+            </div>
+
+            <!-- Blocco 2: Shopping Solidale -->
+            <div class="content-block">
+                <h2>Shopping Solidale</h2>
+                <p>Abbiamo anche creato una sezione "Shopping": <br>
+                Se devi fare acquisti online, entra nei tuoi negozi preferiti partendo da lì. In questo modo il contributo sarà ancora più grande, e non ti costerà nulla in più.</p>
+            </div>
+
+            <!-- Blocco 3: La Pubblicità Necessaria -->
+            <div class="content-block">
+                <h2>La Pubblicità Necessaria</h2>
+                <p>Non amiamo la pubblicità, ma è necessaria ai nostri obiettivi: <strong>generare donazioni continue senza chiedere soldi ! <br>
+                    </strong> Ogni annuncio guardato, ogni click pubblicitario, ogni acquisto effettuato tramite i link nella sezione Shopping, genera una piccola donazione per sostenere i nostri progetti.</p>
+            </div>
+
+            <!-- Blocco 4: Trasparenza Totale -->
+            <div class="content-block">
+                <h2>Trasparenza</h2>
+                <p>I fondi da donare vengono rendicontati con trasparenza. Ogni donazione conta e fa la differenza per chi ha bisogno.</p>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- Piè di pagina (Footer) -->
+    <footer>
+        <p>&copy; 2025 Kindorya.org - Tutti i diritti riservati</p>
+        <p style="margin-top: 10px;">Ricerca per Gaza. Ogni click conta.</p>
+    </footer>
+</body>
+</html>
