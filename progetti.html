@@ -13,14 +13,117 @@
         gtag('js', new Date());
         gtag('config', 'G-TP3S3CX0L4');
     </script>
+    
+    <style>
+        /* Cards ridotte al 50% */
+        .cards-section .cards {
+            max-width: 50%;
+            margin: 0 auto;
+        }
+        
+        /* Griglia 4 colonne */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .project-card h4 {
+            color: #4CAF50;
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+        }
+        
+        .project-card p {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        /* Contatore Fondi */
+        .fund-counter {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            text-align: center;
+            padding: 25px 20px;
+        }
+        
+        .fund-counter h4 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        
+        .fund-amount {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+        
+        .fund-goal {
+            font-size: 1rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+        
+        .progress-bar {
+            background: rgba(255,255,255,0.3);
+            border-radius: 10px;
+            height: 20px;
+            margin: 15px 0;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            background: white;
+            height: 100%;
+            border-radius: 10px;
+            width: 0%;
+            transition: width 2s ease;
+        }
+        
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .projects-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .cards-section .cards {
+                max-width: 80%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .cards-section .cards {
+                max-width: 100%;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/helpingaid/Action/main/Albero.png" alt="Logo Kindorya - Albero">
+            <a href="index.html" class="logo">
+                <img src="https://helpingaid.github.io/Action/albero.png" alt="Kindorya">
                 <span class="logo-text">Kindorya</span>
-            </div>
+            </a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="valori.html">Valori</a>
@@ -37,27 +140,64 @@
         <h1 style="text-align: center;">I Nostri Progetti</h1>
         
         <div class="content-block">
-            <p>Sosteniamo la Palestina Oggi più che mai, in Palestina c’è bisogno di tutto: cibo, cure mediche e ricostruzione.</p>
-            <p>Il nostro impegno si concentra su tre aree fondamentali progetti alimentari , sanitari e di ricostruzione.</p><br>
-			<p>Siamo ancora all’inizio e stiamo selezionando con cura i progetti in cui crediamo davvero e a cui destinare i fondi</p>
+            <p>Stiamo raccogliendo fondi per sostenere la Palestina, dove oggi serve tutto: cibo, cure e ricostruzione.</p>
+            <p>Il nostro impegno si concentra su tre aree fondamentali:</p>
             <ul style="margin-top: 20px; line-height: 2;">
-                <li><strong>Progetti alimentari</strong>, per garantire sopravvivenza tramite pasti e beni di prima necessità alle famiglie colpite.</li>
-                <li><strong>Progetti sanitari</strong>, per fornire medicinali, supporto medico e assistenza a chi senza, rischia di non farcela</li>
+                <li><strong>Progetti alimentari</strong>, per garantire pasti e beni di prima necessità alle famiglie colpite.</li>
+                <li><strong>Progetti sanitari</strong>, per fornire medicinali, supporto medico e assistenza ai più fragili.</li>
                 <li><strong>Progetti di ricostruzione</strong>, per ridare speranza e dignità a chi ha perso la propria casa e il proprio lavoro.</li>
             </ul>
-            <p style="margin-top: 20px;">Abbiamo appena iniziato questo percorso, ma crediamo nella forza della comunità e della solidarietà. Questa sezione verrà aggiornata regolarmente per mostrare i progressi che stiamo raggiungendo insieme.</p>
+            <p style="margin-top: 20px;">Abbiamo appena iniziato questo percorso, ma crediamo nella forza della comunità e della solidarietà. Questa sezione verrà aggiornata regolarmente per mostrare i progressi che stiamo <strong>raggiungendo insieme</strong>.</p>
         </div>
 
-        <div class="counter-card">
-            <div class="counter-label">Fondi Raccolti Finora</div>
-            <div class="counter-number">€ 0,00</div>
-            <div class="counter-label">Aggiornato al: [Data da aggiornare manualmente]</div>
+        <!-- 4 Cards in colonne con contatore -->
+        <div class="projects-grid">
+            <div class="project-card">
+                <h4>🍞 Progetti Alimentari</h4>
+                <p>Distribuzione di pasti caldi e beni di prima necessità alle famiglie più vulnerabili.</p>
+                <p><strong>Stato:</strong> In corso</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Aggiornato: Gennaio 2025</p>
+            </div>
+
+            <div class="project-card">
+                <h4>🏥 Progetti Sanitari</h4>
+                <p>Fornitura di medicinali essenziali e supporto medico per chi ne ha più bisogno.</p>
+                <p><strong>Stato:</strong> In pianificazione</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Prossimo aggiornamento: Febbraio 2025</p>
+            </div>
+
+            <div class="project-card">
+                <h4>🏗️ Ricostruzione</h4>
+                <p>Sostegno alla ricostruzione di case e infrastrutture per ridare dignità alle persone.</p>
+                <p><strong>Stato:</strong> In valutazione</p>
+                <p style="font-size: 0.9rem; color: #999; margin-top: 15px;">Piano a lungo termine</p>
+            </div>
+
+            <div class="project-card fund-counter">
+                <h4>💰 Fondi Raccolti</h4>
+                <div class="fund-amount" id="fundAmount">€ 0,00</div>
+                <div class="fund-goal">Obiettivo: € 10,000</div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Aggiornato al: <span id="updateDate">01/01/2025</span></p>
+                <p style="font-size: 0.85rem; margin-top: 10px; opacity: 0.9;">Ogni contributo conta! 🙏</p>
+            </div>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Kindorya - Tutti i diritti riservati</p>
+        <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
+
+    <script>
+        // Animazione contatore (esempio)
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('progressFill').style.width = '0%'; // Cambia in base ai fondi raccolti
+            }, 500);
+        });
+    </script>
 </body>
 </html>
