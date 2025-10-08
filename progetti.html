@@ -15,13 +15,15 @@
     </script>
     
     <style>
-        /* Cards ridotte al 50% */
+        .content-block {
+            background: #FBFCFC !important;
+        }
+        
         .cards-section .cards {
             max-width: 50%;
             margin: 0 auto;
         }
         
-        /* Griglia 4 colonne */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -31,7 +33,7 @@
         }
         
         .project-card {
-            background: white;
+            background: #FBFCFC;
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -54,7 +56,6 @@
             margin-bottom: 10px;
         }
         
-        /* Contatore Fondi */
         .fund-counter {
             background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
             color: white;
@@ -95,7 +96,6 @@
             transition: width 2s ease;
         }
         
-        /* Responsive */
         @media (max-width: 1024px) {
             .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -150,7 +150,6 @@
             <p style="margin-top: 20px;">Abbiamo appena iniziato questo percorso, ma crediamo nella forza della comunità e della solidarietà. Questa sezione verrà aggiornata regolarmente per mostrare i progressi che stiamo <strong>raggiungendo insieme</strong>.</p>
         </div>
 
-        <!-- 4 Cards in colonne con contatore -->
         <div class="projects-grid">
             <div class="project-card">
                 <h4>🍞 Progetti Alimentari</h4>
@@ -175,7 +174,7 @@
 
             <div class="project-card fund-counter">
                 <h4>💰 Fondi Raccolti</h4>
-                <div class="fund-amount" id="fundAmount">€ 5000,00</div>
+                <div class="fund-amount" id="fundAmount">€ 0,00</div>
                 <div class="fund-goal">Obiettivo: € 10,000</div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
@@ -192,15 +191,11 @@
     </footer>
 
     <script>
-        // Animazione contatore (esempio)
         window.addEventListener('load', function() {
             setTimeout(function() {
-                document.getElementById('progressFill').style.width = '0%'; // Cambia in base ai fondi raccolti
+                document.getElementById('progressFill').style.width = '0%';
             }, 500);
         });
     </script>
 </body>
-
 </html>
-
-
