@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Risorse - Kindorya</title>
+    <title>Articolo - Kindorya</title>
     <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825054531176545" crossorigin="anonymous"></script>
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3S3CX0L4"></script>
     <script>
@@ -13,14 +16,159 @@
         gtag('js', new Date());
         gtag('config', 'G-TP3S3CX0L4');
     </script>
+    
+    <style>
+        .article-header {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+            border-radius: 0 0 20px 20px;
+        }
+        
+        .article-header img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .article-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+        
+        .article-content {
+            background: #FBFCFC;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+        }
+        
+        .article-content h1 {
+            color: #4CAF50;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            line-height: 1.2;
+        }
+        
+        .article-meta {
+            color: #999;
+            font-size: 0.95rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #f0f0f0;
+        }
+        
+        .article-content h2 {
+            color: #333;
+            font-size: 1.8rem;
+            margin-top: 35px;
+            margin-bottom: 15px;
+        }
+        
+        .article-content h3 {
+            color: #555;
+            font-size: 1.4rem;
+            margin-top: 25px;
+            margin-bottom: 12px;
+        }
+        
+        .article-content p {
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #444;
+            text-align: justify;
+        }
+        
+        .article-content ul, .article-content ol {
+            margin: 20px 0;
+            padding-left: 30px;
+        }
+        
+        .article-content li {
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
+        
+        .article-content blockquote {
+            border-left: 4px solid #4CAF50;
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .article-sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        
+        .ad-space {
+            background: #f8f9fa;
+            border: 2px dashed #ddd;
+            border-radius: 12px;
+            min-height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            top: 20px;
+        }
+        
+        .ad-space-content {
+            color: #999;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .article-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .article-sidebar {
+                order: -1;
+            }
+            
+            .ad-space {
+                position: relative;
+                top: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .article-header {
+                height: 250px;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .article-content h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
         <div class="header-content">
-            <div class="logo">
-                <img src="https://raw.githubusercontent.com/helpingaid/Action/main/Albero.png" alt="Logo Kindorya - Albero">
+            <a href="index.html" class="logo">
+                <img src="https://raw.githubusercontent.com/helpingaid/Action/main/Albero.png" alt="Kindorya">
                 <span class="logo-text">Kindorya</span>
-            </div>
+            </a>
             <nav>
                 <a href="index.html">Home</a>
                 <a href="valori.html">Valori</a>
@@ -33,128 +181,121 @@
         </div>
     </header>
 
-    <div class="content-section">
-        <h1 style="text-align: center;">Risorse</h1>
-        
-        <div class="tabs-container">
-            <div class="tabs">
-                <button class="tab-btn active" onclick="showTab('articoli')">Articoli</button>
-                <button class="tab-btn" onclick="showTab('magazines')">Magazines</button>
-                <button class="tab-btn" onclick="showTab('instagram')">Instagram</button>
-                <button class="tab-btn" onclick="showTab('youtube')">YouTube</button>
-                <button class="tab-btn" onclick="showTab('associazioni')">Associazioni</button>
+    <div class="article-header">
+        <p>📸 Spazio per immagine articolo</p>
+    </div>
+
+    <div class="article-container">
+        <div class="article-content">
+            <h1>Come Fare la Differenza: La Storia di Kindorya</h1>
+            
+            <div class="article-meta">
+                <span>📅 Pubblicato il: 8 Gennaio 2025</span> • 
+                <span>✍️ Autore: Team Kindorya</span> • 
+                <span>⏱️ Lettura: 5 minuti</span>
             </div>
 
-            <div id="articoli" class="tab-content active">
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <div class="resource-card-image">📰</div>
-                        <div class="resource-card-content">
-                            <h4>Articolo 1</h4>
-                            <p>Descrizione dell'articolo scritto da noi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                            <a href="#">Leggi di più →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">📝</div>
-                        <div class="resource-card-content">
-                            <h4>Articolo 2</h4>
-                            <p>Descrizione dell'articolo scritto da noi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                            <a href="#">Leggi di più →</a>
-                        </div>
-                    </div>
+            <p>In un mondo sempre più connesso, ogni nostra azione può avere un impatto significativo sulla vita di altre persone. Kindorya nasce proprio da questa consapevolezza: trasformare gesti quotidiani come la ricerca online e lo shopping in opportunità concrete di solidarietà.</p>
+
+            <h2>La Nascita di un Progetto</h2>
+            
+            <p>L'idea di Kindorya è nata dall'osservazione di una semplice verità: ogni giorno milioni di persone utilizzano motori di ricerca e fanno acquisti online. E se queste azioni quotidiane potessero generare fondi per aiutare chi ne ha più bisogno?</p>
+
+            <p>Così è nato il nostro progetto, con l'obiettivo di creare un ponte tra il mondo digitale e quello reale, permettendo a chiunque di contribuire alla ricostruzione e al sostegno della Palestina semplicemente continuando a fare ciò che fa ogni giorno.</p>
+
+            <h2>Come Funziona il Nostro Sistema</h2>
+
+            <p>Il meccanismo è semplice ma efficace. Quando utilizzi il nostro motore di ricerca o fai acquisti attraverso i nostri partner affiliati, una piccola percentuale viene convertita in fondi destinati ai nostri progetti umanitari.</p>
+
+            <ul>
+                <li><strong>Ricerca consapevole:</strong> Ogni ricerca effettuata genera micro-entrate pubblicitarie</li>
+                <li><strong>Shopping solidale:</strong> Gli acquisti attraverso i partner affiliati generano commissioni</li>
+                <li><strong>Trasparenza totale:</strong> Tutti i fondi raccolti vengono tracciati e rendicontati</li>
+            </ul>
+
+            <h2>L'Impatto Reale sul Territorio</h2>
+
+            <p>I fondi raccolti vengono destinati a tre aree principali di intervento, tutte cruciali per la popolazione palestinese:</p>
+
+            <h3>Progetti Alimentari</h3>
+            <p>La sicurezza alimentare è una priorità assoluta. Attraverso i nostri partner locali, distribuiamo pasti caldi e beni di prima necessità alle famiglie più vulnerabili, assicurando che nessuno debba affrontare la fame.</p>
+
+            <h3>Assistenza Sanitaria</h3>
+            <p>L'accesso alle cure mediche è fondamentale. Forniamo medicinali essenziali, supporto medico e assistenza psicologica a chi ha subito traumi, lavorando con organizzazioni sanitarie locali per massimizzare l'impatto.</p>
+
+            <h3>Ricostruzione e Futuro</h3>
+            <p>Guardare al futuro significa investire nella ricostruzione. Sosteniamo progetti di ricostruzione di case, scuole e infrastrutture, ridando dignità e speranza alle comunità colpite.</p>
+
+            <blockquote>
+                "Non possiamo cambiare il mondo da soli, ma insieme possiamo fare la differenza. Ogni piccolo gesto conta, ogni ricerca ha un significato, ogni acquisto può salvare una vita."
+            </blockquote>
+
+            <h2>Unisciti a Noi</h2>
+
+            <p>Diventare parte di Kindorya è semplice. Non ti chiediamo di cambiare le tue abitudini o di fare donazioni dirette. Ti chiediamo solo di utilizzare i nostri strumenti per le tue attività quotidiane online.</p>
+
+            <p>Imposta Kindorya come tua homepage, salvaci tra i preferiti, e usa il nostro motore di ricerca ogni volta che cerchi qualcosa sul web. Quando devi fare acquisti online, passa attraverso i nostri partner affiliati.</p>
+
+            <p>È così che insieme possiamo costruire un futuro migliore, una ricerca alla volta, un acquisto alla volta, un gesto solidale alla volta.</p>
+
+            <h2>La Trasparenza Come Valore</h2>
+
+            <p>Crediamo fermamente nella trasparenza. Per questo motivo, pubblicheremo regolarmente aggiornamenti sui fondi raccolti, sui progetti finanziati e sull'impatto concreto delle nostre azioni.</p>
+
+            <p>Ogni euro raccolto viene tracciato e destinato direttamente ai progetti. Non ci sono costi nascosti, non ci sono intermediazioni opache. La nostra missione è chiara: massimizzare l'impatto di ogni contributo.</p>
+
+            <h2>Il Futuro che Vogliamo Costruire</h2>
+
+            <p>Il nostro sogno è quello di creare una comunità globale di persone consapevoli, che attraverso piccoli gesti quotidiani contribuiscono a costruire un mondo più giusto e solidale.</p>
+
+            <p>Immagina un futuro in cui ogni ricerca online, ogni acquisto, ogni click diventa un mattone per costruire case, fornire cibo, garantire cure mediche. Questo è il futuro che vogliamo costruire insieme a te.</p>
+
+            <p style="font-weight: bold; color: #4CAF50; font-size: 1.1rem; margin-top: 40px;">Grazie per essere parte di questo viaggio. Insieme, possiamo fare la differenza. 💚</p>
+
+            <div style="margin-top: 50px; padding: 30px; background: #f8f9fa; border-radius: 12px; text-align: center;">
+                <h3 style="color: #4CAF50; margin-bottom: 15px;">Vuoi saperne di più?</h3>
+                <p style="margin-bottom: 20px;">Scopri tutti i nostri progetti e come puoi contribuire</p>
+                <a href="progetti.html" style="display: inline-block; background: #4CAF50; color: white; padding: 12px 30px; border-radius: 25px; text-decoration: none; font-weight: bold;">Vai ai Progetti</a>
+            </div>
+        </div>
+
+        <div class="article-sidebar">
+            <div class="ad-space">
+                <div class="ad-space-content">
+                    <p><strong>📢 Pubblicità AdSense #1</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Inserisci qui il codice AdSense</p>
+                    <!-- 
+                    <ins class="adsbygoogle"
+                         style="display:block"
+                         data-ad-client="ca-pub-3825054531176545"
+                         data-ad-slot="XXXXXXXXX"
+                         data-ad-format="auto"
+                         data-full-width-responsive="true"></ins>
+                    <script>
+                         (adsbygoogle = window.adsbygoogle || []).push({});
+                    </script>
+                    -->
                 </div>
             </div>
 
-            <div id="magazines" class="tab-content">
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <div class="resource-card-image">📚</div>
-                        <div class="resource-card-content">
-                            <h4>Magazine 1</h4>
-                            <p>Link ad articolo esterno. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                            <a href="#" target="_blank">Vai all'articolo →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">📖</div>
-                        <div class="resource-card-content">
-                            <h4>Magazine 2</h4>
-                            <p>Link ad articolo esterno. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                            <a href="#Articolo1.html" target="_blank">Vai all'articolo →</a>
-                        </div>
-                    </div>
+            <div class="ad-space">
+                <div class="ad-space-content">
+                    <p><strong>📢 Pubblicità AdSense #2</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Inserisci qui il codice AdSense</p>
                 </div>
             </div>
 
-            <div id="instagram" class="tab-content">
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <div class="resource-card-image">📷</div>
-                        <div class="resource-card-content">
-                            <h4>Creator Instagram 1</h4>
-                            <p>Descrizione creator. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                            <a href="#" target="_blank">Segui su Instagram →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">📸</div>
-                        <div class="resource-card-content">
-                            <h4>Creator Instagram 2</h4>
-                            <p>Descrizione creator. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.</p>
-                            <a href="#" target="_blank">Segui su Instagram →</a>
-                        </div>
-                    </div>
+            <div class="ad-space">
+                <div class="ad-space-content">
+                    <p><strong>📢 Pubblicità AdSense #3</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Inserisci qui il codice AdSense</p>
                 </div>
             </div>
 
-            <div id="youtube" class="tab-content">
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <div class="resource-card-image">🎥</div>
-                        <div class="resource-card-content">
-                            <h4>Canale YouTube 1</h4>
-                            <p>Descrizione canale. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="#" target="_blank">Guarda su YouTube →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">📹</div>
-                        <div class="resource-card-content">
-                            <h4>Canale YouTube 2</h4>
-                            <p>Descrizione canale. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                            <a href="#" target="_blank">Guarda su YouTube →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="associazioni" class="tab-content">
-                <div class="resource-grid">
-                    <div class="resource-card">
-                        <div class="resource-card-image">🏥</div>
-                        <div class="resource-card-content">
-                            <h4>Associazione 1</h4>
-                            <p>Descrizione dell'associazione che opera a Gaza. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                            <a href="#" target="_blank">Visita sito →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">❤️</div>
-                        <div class="resource-card-content">
-                            <h4>Associazione 2</h4>
-                            <p>Descrizione dell'associazione che opera a Gaza. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                            <a href="#" target="_blank">Visita sito →</a>
-                        </div>
-                    </div>
-                    <div class="resource-card">
-                        <div class="resource-card-image">🤝</div>
-                        <div class="resource-card-content">
-                            <h4>Associazione 3</h4>
-                            <p>Descrizione dell'associazione che opera a Gaza. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.</p>
-                            <a href="#" target="_blank">Visita sito →</a>
-                        </div>
-                    </div>
+            <div class="ad-space">
+                <div class="ad-space-content">
+                    <p><strong>📢 Pubblicità AdSense #4</strong></p>
+                    <p style="margin-top: 10px; font-size: 0.85rem;">Inserisci qui il codice AdSense</p>
                 </div>
             </div>
         </div>
@@ -164,21 +305,5 @@
         <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
-
-    <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(content => {
-                content.classList.remove('active');
-            });
-            
-            document.querySelectorAll('.tab-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            
-            document.getElementById(tabId).classList.add('active');
-            event.target.classList.add('active');
-        }
-    </script>
 </body>
 </html>
-
