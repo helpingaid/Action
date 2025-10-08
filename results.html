@@ -213,24 +213,31 @@
             background: #ff8c42 !important;
             border: none !important;
             border-radius: 6px !important;
-            padding: 0 20px !important;
+            padding: 0 12px !important;
             margin-left: 5px !important;
             height: 36px !important;
             min-height: 36px !important;
+            width: auto !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 0 20px !important;
+            padding: 0 12px !important;
             border-radius: 6px !important;
             height: 36px !important;
             min-height: 36px !important;
+            width: auto !important;
         }
 
         .gsc-search-button svg {
-            width: 16px !important;
-            height: 16px !important;
+            width: 14px !important;
+            height: 14px !important;
+        }
+        
+        button.gsc-search-button {
+            min-width: 45px !important;
+            max-width: 50px !important;
         }
 
         /* RESULTS STYLING */
@@ -388,7 +395,6 @@
     <div class="search-header">
         <div class="search-wrapper">
             <div class="search-container">
-                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
                 <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false" data-autoSearchOnLoad="true"></div>
             </div>
         </div>
@@ -396,9 +402,11 @@
 
     <!-- RESULTS SECTION -->
     <div class="results-container">
-        <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
         <div class="gcse-searchresults-only" data-autoSearchOnLoad="true"></div>
     </div>
+    
+    <!-- Google CSE Script - SOLO UNA VOLTA ALLA FINE -->
+    <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
 
     <!-- FOOTER -->
     <footer>
