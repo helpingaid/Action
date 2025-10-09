@@ -26,7 +26,7 @@
         }
 
         body {
-            font-family: 'Corbel', 'Arial', 'Tahoma', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #f9fafb;
             overflow-x: hidden;
@@ -38,9 +38,9 @@
             width: 100%;
         }
 
-        /* HEADER - STESSO STILE DELLE ALTRE PAGINE */
+        /* HEADER */
         header {
-            background: #FBFCFC;
+            background: #1e3c72;
             padding: 15px 40px;
             color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -62,14 +62,9 @@
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             text-decoration: none;
             color: white;
-            transition: opacity 0.3s;
-        }
-
-        .logo:hover {
-            opacity: 0.9;
         }
 
         .logo img {
@@ -91,28 +86,28 @@
         }
 
         nav a {
-            color: #ff8c42;
+            color: rgba(255,255,255,0.85);
             text-decoration: none;
             transition: color 0.3s;
             white-space: nowrap;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: #ff8c42;
         }
 
-        /* SEARCH CONTAINER - STESSO SFONDO DELLE ALTRE PAGINE */
+        /* SEARCH CONTAINER */
         .search-header {
-            background: #FBFCFC;
-            padding: 20px 0;
-            border-bottom: none;
+            background: white;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
             width: 100%;
         }
 
         .search-wrapper {
-            max-width: 1400px;
+            max-width: 100%;
             width: 100%;
-            margin: 0 auto;
+            margin: 0;
             padding: 0 40px;
         }
 
@@ -120,19 +115,6 @@
             max-width: 100%;
             width: 100%;
             position: relative;
-        }
-
-        /* INFO BANNER */
-        .info-banner {
-            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
-            color: white;
-            padding: 15px 40px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .info-banner strong {
-            color: #ff8c42;
         }
 
         /* Google CSE Custom Styling */
@@ -155,10 +137,10 @@
         }
 
         .gsc-input-box {
-            background: white !important;
-            border: 1px solid #1e3c72 !important;
+            background: #f5f5f5 !important;
+            border: 1px solid #ddd !important;
             border-radius: 8px !important;
-            height: 36px !important;
+            height: 32px !important;
             width: 100% !important;
             display: flex !important;
             align-items: center !important;
@@ -166,11 +148,11 @@
 
         .gsc-input input {
             background: transparent !important;
-            color: #1e3c72 !important;
+            color: #333 !important;
             padding: 0 15px !important;
             font-size: 14px !important;
-            height: 36px !important;
-            line-height: 36px !important;
+            height: 32px !important;
+            line-height: 32px !important;
             vertical-align: middle !important;
             width: 100% !important;
         }
@@ -178,12 +160,12 @@
         .gsc-input {
             display: flex !important;
             align-items: center !important;
-            height: 36px !important;
+            height: 32px !important;
             width: 100% !important;
         }
 
         table.gsc-input {
-            height: 36px !important;
+            height: 32px !important;
             width: 100% !important;
         }
 
@@ -203,19 +185,19 @@
             background: #ff8c42 !important;
             border: none !important;
             border-radius: 6px !important;
-            padding: 0 15px !important;
+            padding: 0 12px !important;
             margin-left: 5px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            height: 28px !important;
+            min-height: 28px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 0 15px !important;
+            padding: 0 12px !important;
             border-radius: 6px !important;
-            height: 32px !important;
-            min-height: 32px !important;
+            height: 28px !important;
+            min-height: 28px !important;
         }
 
         .gsc-search-button svg {
@@ -223,17 +205,12 @@
             height: 14px !important;
         }
 
-        .gsst_a {
-            padding: 5px 10px !important;
-        }
-
         /* RESULTS STYLING */
         .results-container {
-            max-width: 1400px;
+            max-width: 100%;
             width: 100%;
-            margin: 0 auto;
-            padding: 40px 40px 20px;
-            background: #f9fafb;
+            margin: 0;
+            padding: 20px 40px;
         }
 
         .gsc-results-wrapper-overlay,
@@ -258,24 +235,27 @@
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             border-radius: 8px !important;
-            padding: 15px !important;
-            margin-bottom: 15px !important;
+            padding: 12px 15px !important;
+            margin-bottom: 12px !important;
             transition: all 0.3s !important;
             width: 100% !important;
         }
 
         .gsc-result:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1) !important;
+            border-color: #ff8c42 !important;
         }
 
         .gs-title {
             color: #1e3c72 !important;
-            font-size: 18px !important;
+            font-size: 16px !important;
             font-weight: 600 !important;
+            margin-bottom: 5px !important;
         }
 
         .gs-title:hover {
             color: #ff8c42 !important;
+            text-decoration: underline !important;
         }
 
         .gs-webResult .gs-title,
@@ -290,11 +270,18 @@
 
         .gs-snippet {
             color: #555 !important;
-            line-height: 1.6 !important;
+            line-height: 1.5 !important;
+            font-size: 13px !important;
         }
 
         .gsc-url-top {
-            color: #666 !important;
+            color: #0066cc !important;
+            font-size: 12px !important;
+            margin-bottom: 4px !important;
+        }
+
+        .gs-per-result-labels {
+            display: none !important;
         }
 
         .gsc-above-wrapper-area {
@@ -303,25 +290,34 @@
 
         /* PAGINATION */
         .gsc-results .gsc-cursor-box {
-            margin-top: 30px !important;
+            margin-top: 40px !important;
+            text-align: center !important;
         }
 
         .gsc-cursor-page {
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             color: #1e3c72 !important;
-            padding: 8px 12px !important;
-            border-radius: 5px !important;
+            padding: 10px 15px !important;
+            border-radius: 6px !important;
+            margin: 0 5px !important;
+            font-weight: 500 !important;
+            transition: all 0.3s !important;
         }
 
         .gsc-cursor-page:hover {
-            background: #f0f0e0 !important;
+            background: #f5f5f5 !important;
+            border-color: #ff8c42 !important;
         }
 
         .gsc-cursor-current-page {
             background: #ff8c42 !important;
             color: white !important;
             border-color: #ff8c42 !important;
+        }
+
+        .gsc-cursor-current-page:hover {
+            background: #ff8c42 !important;
         }
 
         /* ADS STYLING */
@@ -331,6 +327,23 @@
             border-radius: 8px !important;
             padding: 15px !important;
             margin-bottom: 20px !important;
+        }
+
+        .gsc-adBlock .gs-title {
+            color: #7c4dff !important;
+        }
+
+        /* INFO MESSAGE */
+        .info-banner {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .info-banner strong {
+            color: #ff8c42;
         }
 
         /* FOOTER */
@@ -354,7 +367,7 @@
 
             .header-content {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
             }
 
             nav {
@@ -366,11 +379,6 @@
             .search-wrapper,
             .results-container {
                 padding: 20px;
-            }
-
-            .info-banner {
-                padding: 15px 20px;
-                font-size: 13px;
             }
         }
     </style>
@@ -395,6 +403,11 @@
         </div>
     </header>
 
+    <!-- INFO BANNER -->
+    <div class="info-banner">
+        💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong> - Grazie per il tuo contributo!
+    </div>
+
     <!-- SEARCH SECTION -->
     <div class="search-header">
         <div class="search-wrapper">
@@ -403,11 +416,6 @@
                 <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false" data-autoSearchOnLoad="true"></div>
             </div>
         </div>
-    </div>
-
-    <!-- INFO BANNER -->
-    <div class="info-banner">
-        💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong> - Grazie per il tuo contributo!
     </div>
 
     <!-- RESULTS SECTION -->
