@@ -18,6 +18,21 @@
         gtag('js', new Date());
         gtag('config', 'G-TP3S3CX0L4');
     </script>
+    
+    <style>
+        /* Override per responsive delle resource cards */
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .resource-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -50,22 +65,29 @@
                 <button class="tab-btn" onclick="showTab('associazioni')">Associazioni</button>
             </div>
 
+            <!-- TAB ARTICOLI - Ordine cronologico (più recente a sinistra) -->
             <div id="articoli" class="tab-content active">
                 <div class="resource-grid">
+                    <!-- Articolo più recente -->
                     <div class="resource-card">
                         <div class="resource-card-image">📰</div>
                         <div class="resource-card-content">
-                            <h4>Articolo 1</h4>
-                            <p>Descrizione dell'articolo scritto da noi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                            <a href="#">Leggi di più →</a>
+                            <h4>Come Fare la Differenza: La Storia di Kindorya</h4>
+                            <p>In un mondo sempre più connesso, ogni nostra azione può avere un impatto significativo. Kindorya trasforma gesti quotidiani come la ricerca online in opportunità concrete di solidarietà per la Palestina.</p>
+                            <a href="Articolo1.html">Leggi di più →</a>
                         </div>
                     </div>
-                    <div class="resource-card">
+                    
+                    <!-- Quando aggiungi nuovi articoli, inseriscili QUI sopra -->
+                    <!-- Gli articoli vecchi slitteranno automaticamente a destra -->
+                    
+                    <!-- Placeholder per articolo futuro -->
+                    <div class="resource-card" style="opacity: 0.5;">
                         <div class="resource-card-image">📝</div>
                         <div class="resource-card-content">
-                            <h4>Articolo 2</h4>
-                            <p>Descrizione dell'articolo scritto da noi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
-                            <a href="#">Leggi di più →</a>
+                            <h4>Prossimo Articolo</h4>
+                            <p>Spazio riservato per il prossimo articolo. Aggiungi qui i tuoi nuovi contenuti e questo slitterà automaticamente verso destra nella griglia.</p>
+                            <a href="#" style="pointer-events: none; opacity: 0.5;">In arrivo →</a>
                         </div>
                     </div>
                 </div>
@@ -86,7 +108,7 @@
                         <div class="resource-card-content">
                             <h4>Magazine 2</h4>
                             <p>Link ad articolo esterno. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
-                            <a href="Articolo1.html" target="_blank">Vai all'articolo →</a>
+                            <a href="#" target="_blank">Vai all'articolo →</a>
                         </div>
                     </div>
                 </div>

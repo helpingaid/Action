@@ -18,6 +18,28 @@
         gtag('js', new Date());
         gtag('config', 'G-TP3S3CX0L4');
     </script>
+    
+    <style>
+        /* Responsive grid per mobile */
+        .funziona-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        @media (max-width: 1024px) {
+            .funziona-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .funziona-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -47,7 +69,7 @@
 			<H2> <span style="color: #ff8c42;">Noi vogliamo che quei guadagni diventino solidarietà ! </span></strong></p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 30px;">
+        <div class="funziona-grid">
             <div class="content-block">
                 <h2>Usa la Barra di Ricerca</h2>
                 <p>Usando la nostra barra di ricerca, tutto rimane semplice come sempre ma ogni tua azione genera una piccola donazione  <BR>
