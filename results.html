@@ -26,7 +26,7 @@
         }
 
         body {
-            font-family: 'Corbel', 'Arial', 'Tahoma', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             background: #f9fafb;
             overflow-x: hidden;
@@ -40,7 +40,7 @@
 
         /* HEADER */
         header {
-            background: #FBFCFC;
+            background: #1e3c72;
             padding: 15px 40px;
             color: white;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -62,14 +62,9 @@
             font-weight: 700;
             display: flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
             text-decoration: none;
             color: white;
-            transition: opacity 0.3s;
-        }
-
-        .logo:hover {
-            opacity: 0.9;
         }
 
         .logo img {
@@ -91,104 +86,73 @@
         }
 
         nav a {
-            color: #ff8c42; 
+            color: rgba(255,255,255,0.85);
             text-decoration: none;
             transition: color 0.3s;
             white-space: nowrap;
         }
 
-        nav a:hover, nav a.active {
+        nav a:hover {
             color: #ff8c42;
         }
 
-        /* INFO BANNER */
-        .info-banner {
-            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
-            color: white;
-            padding: 15px 40px;
-            text-align: center;
-            font-size: 14px;
-        }
-
-        .info-banner strong {
-            color: #ff8c42;
-        }
-
-        /* SEARCH CONTAINER - FULL WIDTH */
+        /* SEARCH CONTAINER */
         .search-header {
             background: white;
-            padding: 20px 0;
+            padding: 12px 0;
             border-bottom: 1px solid #e0e0e0;
             width: 100%;
         }
 
         .search-wrapper {
-            max-width: 1200px;
+            max-width: 100%;
             width: 100%;
-            margin: 0 auto;
+            margin: 0;
             padding: 0 40px;
         }
 
         .search-container {
+            max-width: 100%;
             width: 100%;
             position: relative;
         }
 
-        /* Google CSE - LARGHEZZA COMPLETA */
+        /* Google CSE Custom Styling */
         .gcse-searchbox-only {
             background: transparent !important;
             width: 100% !important;
-            display: block !important;
         }
 
         .gsc-search-box {
             margin: 0 !important;
             width: 100% !important;
-            display: block !important;
         }
 
         .gsc-search-box-tools {
             width: 100% !important;
-            display: block !important;
         }
 
         .gsc-search-box table {
             width: 100% !important;
-            display: table !important;
-        }
-
-        .gsc-control-cse {
-            width: 100% !important;
-            padding: 0 !important;
-        }
-
-        table.gsc-search-box {
-            width: 100% !important;
-            margin: 0 !important;
-        }
-
-        td.gsc-input {
-            width: 100% !important;
-            padding-right: 0 !important;
         }
 
         .gsc-input-box {
-            background: white !important;
-            border: 1px solid #1e3c72 !important;
+            background: #f5f5f5 !important;
+            border: 1px solid #ddd !important;
             border-radius: 8px !important;
-            height: 40px !important;
+            height: 32px !important;
+            width: 100% !important;
             display: flex !important;
             align-items: center !important;
-            width: 100% !important;
         }
 
         .gsc-input input {
             background: transparent !important;
-            color: #1e3c72 !important;
+            color: #333 !important;
             padding: 0 15px !important;
-            font-size: 15px !important;
-            height: 40px !important;
-            line-height: 40px !important;
+            font-size: 14px !important;
+            height: 32px !important;
+            line-height: 32px !important;
             vertical-align: middle !important;
             width: 100% !important;
         }
@@ -196,12 +160,12 @@
         .gsc-input {
             display: flex !important;
             align-items: center !important;
-            height: 40px !important;
+            height: 32px !important;
             width: 100% !important;
         }
 
         table.gsc-input {
-            height: 40px !important;
+            height: 32px !important;
             width: 100% !important;
         }
 
@@ -217,37 +181,23 @@
             width: 100% !important;
         }
 
-        /* PULSANTE COMPATTO */
-        td.gsc-search-button {
-            width: 50px !important;
-            min-width: 50px !important;
-            max-width: 50px !important;
-            padding-left: 5px !important;
-        }
-
         .gsc-search-button {
             background: #ff8c42 !important;
             border: none !important;
             border-radius: 6px !important;
-            padding: 8px !important;
+            padding: 0 12px !important;
             margin-left: 5px !important;
-            height: 36px !important;
-            min-height: 36px !important;
-            width: 44px !important;
-            min-width: 44px !important;
-            max-width: 44px !important;
+            height: 28px !important;
+            min-height: 28px !important;
         }
 
         .gsc-search-button-v2 {
             background: #ff8c42 !important;
             border: none !important;
-            padding: 8px !important;
+            padding: 0 12px !important;
             border-radius: 6px !important;
-            height: 36px !important;
-            min-height: 36px !important;
-            width: 44px !important;
-            min-width: 44px !important;
-            max-width: 44px !important;
+            height: 28px !important;
+            min-height: 28px !important;
         }
 
         .gsc-search-button svg {
@@ -255,63 +205,92 @@
             height: 14px !important;
         }
 
-        button.gsc-search-button,
-        button.gsc-search-button-v2 {
-            width: 44px !important;
-            min-width: 44px !important;
-            max-width: 44px !important;
-        }
-
         /* RESULTS STYLING */
         .results-container {
-            max-width: 1200px;
+            max-width: 100%;
             width: 100%;
-            margin: 0 auto;
-            padding: 30px 40px;
+            margin: 0;
+            padding: 20px 40px;
         }
 
         .gsc-results-wrapper-overlay,
         .gsc-results-wrapper-visible {
             background: transparent !important;
             width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .gsc-resultsbox-visible {
+            width: 100% !important;
+            max-width: 100% !important;
+        }
+
+        .gsc-webResult,
+        .gsc-results {
+            width: 100% !important;
+            max-width: 100% !important;
         }
 
         .gsc-result {
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             border-radius: 8px !important;
-            padding: 15px !important;
-            margin-bottom: 15px !important;
+            padding: 12px 15px !important;
+            margin-bottom: 12px !important;
             transition: all 0.3s !important;
+            width: 100% !important;
         }
 
         .gsc-result:hover {
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1) !important;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1) !important;
             border-color: #ff8c42 !important;
         }
 
         .gs-title {
             color: #1e3c72 !important;
-            font-size: 18px !important;
+            font-size: 16px !important;
             font-weight: 600 !important;
+            margin-bottom: 5px !important;
         }
 
         .gs-title:hover {
+            color: #ff8c42 !important;
+            text-decoration: underline !important;
+        }
+
+        .gs-webResult .gs-title,
+        .gs-imageResult .gs-title {
+            color: #1e3c72 !important;
+        }
+
+        .gs-webResult .gs-title:hover,
+        .gs-imageResult .gs-title:hover {
             color: #ff8c42 !important;
         }
 
         .gs-snippet {
             color: #555 !important;
-            line-height: 1.6 !important;
+            line-height: 1.5 !important;
+            font-size: 13px !important;
         }
 
         .gsc-url-top {
             color: #0066cc !important;
+            font-size: 12px !important;
+            margin-bottom: 4px !important;
+        }
+
+        .gs-per-result-labels {
+            display: none !important;
+        }
+
+        .gsc-above-wrapper-area {
+            width: 100% !important;
         }
 
         /* PAGINATION */
         .gsc-results .gsc-cursor-box {
-            margin-top: 30px !important;
+            margin-top: 40px !important;
             text-align: center !important;
         }
 
@@ -319,19 +298,52 @@
             background: white !important;
             border: 1px solid #e0e0e0 !important;
             color: #1e3c72 !important;
-            padding: 8px 12px !important;
-            border-radius: 5px !important;
+            padding: 10px 15px !important;
+            border-radius: 6px !important;
             margin: 0 5px !important;
+            font-weight: 500 !important;
+            transition: all 0.3s !important;
         }
 
         .gsc-cursor-page:hover {
-            background: #f0f0e0 !important;
+            background: #f5f5f5 !important;
+            border-color: #ff8c42 !important;
         }
 
         .gsc-cursor-current-page {
             background: #ff8c42 !important;
             color: white !important;
             border-color: #ff8c42 !important;
+        }
+
+        .gsc-cursor-current-page:hover {
+            background: #ff8c42 !important;
+        }
+
+        /* ADS STYLING */
+        .gsc-adBlock {
+            background: #fffbf0 !important;
+            border: 1px solid #ffe4a3 !important;
+            border-radius: 8px !important;
+            padding: 15px !important;
+            margin-bottom: 20px !important;
+        }
+
+        .gsc-adBlock .gs-title {
+            color: #7c4dff !important;
+        }
+
+        /* INFO MESSAGE */
+        .info-banner {
+            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+            color: white;
+            padding: 15px 40px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .info-banner strong {
+            color: #ff8c42;
         }
 
         /* FOOTER */
@@ -355,7 +367,7 @@
 
             .header-content {
                 flex-direction: column;
-                gap: 10px;
+                gap: 15px;
             }
 
             nav {
@@ -367,10 +379,6 @@
             .search-wrapper,
             .results-container {
                 padding: 20px;
-            }
-
-            .info-banner {
-                padding: 15px 20px;
             }
         }
     </style>
@@ -400,13 +408,20 @@
         💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong> - Grazie per il tuo contributo!
     </div>
 
-    <!-- SEARCH + RESULTS IN ONE CONTAINER -->
+    <!-- SEARCH SECTION -->
     <div class="search-header">
         <div class="search-wrapper">
             <div class="search-container">
-                <div class="gcse-search"></div>
+                <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+                <div class="gcse-searchbox-only" data-resultsUrl="results.html" data-newWindow="false" data-autoSearchOnLoad="true"></div>
             </div>
         </div>
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div class="results-container">
+        <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+        <div class="gcse-searchresults-only" data-autoSearchOnLoad="true"></div>
     </div>
 
     <!-- FOOTER -->
@@ -414,8 +429,5 @@
         <p>&copy; 2024 Kindorya - Tutti i diritti riservati</p>
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
-    
-    <!-- Google CSE Script - UNA VOLTA SOLA -->
-    <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
 </body>
 </html>

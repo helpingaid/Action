@@ -6,6 +6,11 @@
     <title>I Nostri Progetti - Kindorya</title>
     <link rel="stylesheet" href="styles.css">
     
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3825054531176545"
+     crossorigin="anonymous"></script>
+    
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TP3S3CX0L4"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -15,15 +20,13 @@
     </script>
     
     <style>
-        .content-block {
-            background: #FBFCFC !important;
-        }
-        
+        /* Cards ridotte al 50% */
         .cards-section .cards {
             max-width: 50%;
             margin: 0 auto;
         }
         
+        /* Griglia 4 colonne */
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -33,7 +36,7 @@
         }
         
         .project-card {
-            background: #FBFCFC;
+            background: white;
             border-radius: 12px;
             padding: 25px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
@@ -56,6 +59,7 @@
             margin-bottom: 10px;
         }
         
+        /* Contatore Fondi */
         .fund-counter {
             background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
             color: white;
@@ -96,6 +100,7 @@
             transition: width 2s ease;
         }
         
+        /* Responsive */
         @media (max-width: 1024px) {
             .projects-grid {
                 grid-template-columns: repeat(2, 1fr);
@@ -150,6 +155,7 @@
             <p style="margin-top: 20px;">Abbiamo appena iniziato questo percorso, ma crediamo nella forza della comunità e della solidarietà. Questa sezione verrà aggiornata regolarmente per mostrare i progressi che stiamo <strong>raggiungendo insieme</strong>.</p>
         </div>
 
+        <!-- 4 Cards in colonne con contatore -->
         <div class="projects-grid">
             <div class="project-card">
                 <h4>🍞 Progetti Alimentari</h4>
@@ -191,9 +197,10 @@
     </footer>
 
     <script>
+        // Animazione contatore (esempio)
         window.addEventListener('load', function() {
             setTimeout(function() {
-                document.getElementById('progressFill').style.width = '0%';
+                document.getElementById('progressFill').style.width = '0%'; // Cambia in base ai fondi raccolti
             }, 500);
         });
     </script>
