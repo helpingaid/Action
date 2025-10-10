@@ -101,20 +101,72 @@
             color: #ff8c42;
         }
 
-        /* INFO BANNER */
+        /* INFO BANNER CON CONTATORE */
         .info-banner {
-            background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
-            color: white;
-            padding: 15px 40px;
-            text-align: center;
-            font-size: 14px;
+            background: #FBFCFC;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
         }
 
-        .info-banner strong {
+        .banner-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #1e3c72;
+            font-size: 15px;
+        }
+
+        .banner-left strong {
             color: #ff8c42;
         }
 
-        /* SEARCH CONTAINER - FULL WIDTH */
+        .search-counter {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: white;
+            padding: 12px 20px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .bowl-icon {
+            font-size: 28px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .counter-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .counter-label {
+            font-size: 11px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .counter-value {
+            font-size: 22px;
+            font-weight: 700;
+            color: #1e3c72;
+        }
+
+        .counter-value span {
+            color: #ff8c42;
+        }
+
+        /* SEARCH CONTAINER */
         .search-header {
             background: white;
             padding: 20px 0;
@@ -134,7 +186,7 @@
             position: relative;
         }
 
-        /* Google CSE - LARGHEZZA COMPLETA */
+        /* Google CSE */
         .gcse-searchbox-only {
             background: transparent !important;
             width: 100% !important;
@@ -217,7 +269,6 @@
             width: 100% !important;
         }
 
-        /* PULSANTE COMPATTO */
         td.gsc-search-button {
             width: 50px !important;
             min-width: 50px !important;
@@ -262,7 +313,7 @@
             max-width: 44px !important;
         }
 
-        /* RESULTS STYLING */
+        /* RESULTS */
         .results-container {
             max-width: 1200px;
             width: 100%;
@@ -364,13 +415,15 @@
                 justify-content: center;
             }
 
-            .search-wrapper,
-            .results-container {
+            .info-banner {
+                flex-direction: column;
+                gap: 15px;
                 padding: 20px;
             }
 
-            .info-banner {
-                padding: 15px 20px;
+            .search-wrapper,
+            .results-container {
+                padding: 20px;
             }
         }
     </style>
@@ -395,12 +448,21 @@
         </div>
     </header>
 
-    <!-- INFO BANNER -->
+    <!-- INFO BANNER CON CONTATORE -->
     <div class="info-banner">
-        💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong> - Grazie per il tuo contributo!
+        <div class="banner-left">
+            <span>💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong></span>
+        </div>
+        <div class="search-counter">
+            <div class="bowl-icon">🍚</div>
+            <div class="counter-info">
+                <div class="counter-label">Le tue ricerche</div>
+                <div class="counter-value"><span id="searchCount">0</span> ricerche</div>
+            </div>
+        </div>
     </div>
 
-    <!-- SEARCH + RESULTS IN ONE CONTAINER -->
+    <!-- SEARCH + RESULTS -->
     <div class="search-header">
         <div class="search-wrapper">
             <div class="search-container">
@@ -415,7 +477,63 @@
         <p style="margin-top: 10px;">Ricerca con uno scopo. Ogni click conta.</p>
     </footer>
     
-    <!-- Google CSE Script - UNA VOLTA SOLA -->
+    <!-- Google CSE Script -->
     <script async src="https://cse.google.com/cse.js?cx=a7dd1f714294e49b9"></script>
+    
+    <!-- Search Counter Script -->
+    <script>
+        // Funzione per generare un ID utente unico
+        function generateUserId() {
+            return 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+        }
+
+        // Inizializza o recupera userId
+        function initializeUser() {
+            let userId = localStorage.getItem('kindorya_userId');
+            
+            if (!userId) {
+                userId = generateUserId();
+                localStorage.setItem('kindorya_userId', userId);
+                localStorage.setItem('kindorya_searchCount', '0');
+            }
+            
+            return userId;
+        }
+
+        // Incrementa il contatore ricerche
+        function incrementSearchCount() {
+            let searchCount = parseInt(localStorage.getItem('kindorya_searchCount') || '0');
+            searchCount++;
+            localStorage.setItem('kindorya_searchCount', searchCount.toString());
+            updateCounterDisplay(searchCount);
+        }
+
+        // Aggiorna il display del contatore
+        function updateCounterDisplay(count) {
+            const counterElement = document.getElementById('searchCount');
+            if (counterElement) {
+                counterElement.textContent = count;
+            }
+        }
+
+        // Inizializza al caricamento della pagina
+        window.addEventListener('load', function() {
+            const userId = initializeUser();
+            const searchCount = parseInt(localStorage.getItem('kindorya_searchCount') || '0');
+            
+            // Aggiorna display iniziale
+            updateCounterDisplay(searchCount);
+            
+            // Incrementa contatore se c'è una query (significa che è stata fatta una ricerca)
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has('q') || window.location.hash.includes('gsc.q=')) {
+                incrementSearchCount();
+            }
+            
+            // Log per debug (rimuovi in produzione)
+            console.log('User ID:', userId);
+            console.log('Search Count:', searchCount);
+        });
+    </script>
 </body>
 </html>
