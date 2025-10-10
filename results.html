@@ -104,11 +104,12 @@
         /* INFO BANNER CON CONTATORE */
         .info-banner {
             background: #FBFCFC;
-            padding: 20px 40px;
+            padding: 12px 40px;
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #e0e0e0;
+            min-height: 50px;
         }
 
         .banner-left {
@@ -116,7 +117,7 @@
             align-items: center;
             gap: 12px;
             color: #1e3c72;
-            font-size: 15px;
+            font-size: 14px;
         }
 
         .banner-left strong {
@@ -126,43 +127,33 @@
         .search-counter {
             display: flex;
             align-items: center;
-            gap: 15px;
+            gap: 10px;
             background: white;
-            padding: 12px 20px;
-            border-radius: 12px;
+            padding: 8px 16px;
+            border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.06);
         }
 
         .bowl-icon {
-            font-size: 28px;
-            animation: bounce 2s infinite;
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-5px); }
+            font-size: 20px;
+            color: #4CAF50;
+            font-weight: bold;
         }
 
         .counter-info {
             display: flex;
-            flex-direction: column;
-            gap: 2px;
+            align-items: center;
+            gap: 8px;
         }
 
         .counter-label {
-            font-size: 11px;
-            color: #999;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-size: 13px;
+            color: #666;
         }
 
         .counter-value {
-            font-size: 22px;
+            font-size: 18px;
             font-weight: 700;
-            color: #1e3c72;
-        }
-
-        .counter-value span {
             color: #ff8c42;
         }
 
@@ -454,10 +445,10 @@
             <span>💚 Ogni ricerca che fai genera profitti per la <strong>beneficenza</strong></span>
         </div>
         <div class="search-counter">
-            <div class="bowl-icon">🍚</div>
+            <div class="bowl-icon">✚</div>
             <div class="counter-info">
-                <div class="counter-label">Le tue ricerche</div>
-                <div class="counter-value"><span id="searchCount">0</span> ricerche</div>
+                <span class="counter-label">Le tue ricerche:</span>
+                <span class="counter-value" id="searchCount">0</span>
             </div>
         </div>
     </div>
